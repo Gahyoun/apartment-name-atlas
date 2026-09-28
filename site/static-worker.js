@@ -2,6 +2,9 @@
 const FEATURES = ['park', 'water', 'forest', 'school', 'metro'];
 const WS = /[\u0009-\u000d\u001c-\u0020\u0085\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000]+/gu;
 const normalize = value => String(value ?? '').normalize('NFKC').replace(WS, '');
+const numericDesignator = value => /^(?:제)?[0-9]+(?:차|단지|블록|동)?$/u.test(normalize(value));
+const countableToken = token => token.category !== 'number' && !numericDesignator(token.canonical)
+  && (token.category !== 'unclassified' || /[\p{L}\p{N}]/u.test(token.canonical));
 const first = (params, key, fallback = '') => {
   const value = Object.hasOwn(params, key) ? params[key] : fallback;
   return String(Array.isArray(value) ? value[0] ?? '' : value ?? '');
@@ -53,7 +56,7 @@ export class StaticEngine {
       const tokenIDs = [];
       for (let i = 0; i < runs.length; i += 2) tokenIDs.push(runs[i]);
       const templates = tokenIDs.map(id => this.templates[id]);
-      const keys = new Set(templates.filter(t => t.category !== 'unclassified' || /[\p{L}\p{N}]/u.test(t.canonical)).map(t => t.canonical));
+      const keys = new Set(templates.filter(countableToken).map(t => t.canonical));
       return {
         index, id, name, sido, sigungu, dong, dong_code, approval_year,
         lat: coordinates ? coordinates[0] : null, lon: coordinates ? coordinates[1] : null,
@@ -108,7 +111,7 @@ export class StaticEngine {
 
   analysis(params) {
     const filters = this.filters(params), regional = this.select(filters, false), selected = this.select(filters, true, regional);
-    const tokens = [...new Set(first(params, 'tokens', this.core.default_tokens.join(',')).split(',').map(normalize).filter(Boolean))];
+    const tokens = [...new Set(first(params, 'tokens', this.core.default_tokens.join(',')).split(',').map(normalize).filter(token => token && !numericDesignator(token)))];
     if (tokens.length > 30) throw new Error('한 번에 비교할 토큰은 30개 이하로 선택하세요.');
     const byYear = new Map(), topCounts = new Map(), categoryFor = new Map(), provisional = new Set();
     let valid = 0, lowYear = null, highYear = null;

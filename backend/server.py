@@ -36,6 +36,7 @@ BASE_WARNINGS = [
     "준공연도가 없는 단지는 연도별 분모에서 제외합니다.",
     "짧은 부분문자열·주소 기반 지명 등 잠정 분류도 집계에 포함됩니다. 분절의 검토 필요 표시를 확인하세요.",
     "누적 수는 선택한 연도 범위 안에서만 누적됩니다. 토큰 선택은 모집단을 줄이지 않습니다.",
+    "숫자·차수·동 번호는 표현 순위와 그래프에서 제외하며 원문 분절에는 보존합니다.",
 ]
 
 
@@ -172,7 +173,14 @@ def has_coordinates(record: dict) -> bool:
     )
 
 
+def numeric_designator(value: str) -> bool:
+    """Match the entire number/phase label, never digits inside a proper name."""
+    return re.fullmatch(r"(?:제)?[0-9]+(?:차|단지|블록|동)?", normalize_name(value)) is not None
+
+
 def countable_token(token: dict) -> bool:
+    if token["category"] == "number" or numeric_designator(token["canonical"]):
+        return False
     return token["category"] != "unclassified" or any(character.isalnum() for character in token["canonical"])
 
 
@@ -306,7 +314,10 @@ class DataStore:
         regional = filter_records(self.records, filters, include_years=False)
         selected = filter_records(regional, filters)
         raw_tokens = first(params, "tokens", ",".join(DEFAULT_TOKENS))
-        selected_tokens = list(dict.fromkeys(normalize_name(value) for value in raw_tokens.split(",") if normalize_name(value)))
+        selected_tokens = list(dict.fromkeys(
+            normalize_name(value) for value in raw_tokens.split(",")
+            if normalize_name(value) and not numeric_designator(value)
+        ))
         if len(selected_tokens) > 30:
             raise RequestError("한 번에 비교할 토큰은 30개 이하로 선택하세요.")
         by_year = defaultdict(list)

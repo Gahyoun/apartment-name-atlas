@@ -160,6 +160,53 @@ class StaticExportTests(unittest.TestCase):
                 self.assertEqual(actual, expected)
 
     @unittest.skipUnless(NODE, "Node.js is required for JavaScript/Python contract parity")
+    def test_numeric_designators_are_hidden_by_both_apis_without_deleting_raw_tokens(self):
+        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록"]
+        names = ["파크" + value for value in designators] + ["1", "e편한세상2차", "브랜드2"]
+        self.rows = [{**self.rows[0], "id": f"numeric-{index}", "name": name, "approval_year": 2000} for index, name in enumerate(names)]
+        dictionary = {**self.store.dictionary, "entries": [*self.store.dictionary["entries"], {"canonical": "브랜드2", "category": "brand"}]}
+        with mock.patch.object(server, "load_dictionary", return_value=dictionary):
+            self.store = server.DataStore(records=self.rows)
+        # Simulate a legacy snapshot misclassifying an otherwise numeric token.
+        for token in self.store.records[7]["tokens"]:
+            if token["canonical"] == "5차":
+                token["category"] = "unclassified"
+        output = self.build()
+        queries = [
+            {"path": "/api/analysis", "params": {"tokens": ",".join([*designators, "파크", "e편한세상", "브랜드2"])}},
+            {"path": "/api/analysis", "params": {"tokens": ",".join(designators)}},
+            {"path": "/api/tokens"},
+            {"path": "/api/tokens", "params": {"category": "number"}},
+            {"path": "/api/tokens", "params": {"token_q": "1차"}},
+            {"path": "/api/complexes", "params": {"limit": "100"}},
+        ]
+        results = self.run_worker(output, queries)
+        routes = {"/api/analysis": self.store.analysis, "/api/tokens": self.store.tokens, "/api/complexes": self.store.complexes}
+        for query, actual in zip(queries, results):
+            with self.subTest(query=query):
+                self.assertEqual(actual, routes[query["path"]](query.get("params", {})))
+        analysis, numeric_only, tokens, number_tokens, searched_numbers, complexes = results
+        self.assertEqual(analysis["selected_tokens"], ["파크", "e편한세상", "브랜드2"])
+        self.assertEqual({row["token"] for row in tokens["items"]}, {"파크", "e편한세상", "브랜드2"})
+        self.assertEqual(analysis["unique_token_count"], 3)
+        self.assertEqual(analysis["sample_count"], len(self.rows))
+        self.assertEqual(analysis["series"][0]["cumulative_total"], len(self.rows))
+        self.assertEqual(analysis["series"][0]["token_counts"], {"파크": len(designators), "e편한세상": 1, "브랜드2": 1})
+        self.assertEqual(analysis["series"][0]["token_shares"]["파크"], len(designators) / len(self.rows))
+        self.assertEqual(numeric_only["selected_tokens"], [])
+        self.assertEqual(numeric_only["series"][0]["token_counts"], {})
+        self.assertEqual(number_tokens["items"], [])
+        self.assertEqual(searched_numbers["items"], [])
+        self.assertEqual([row["name"] for row in complexes["items"]], names)
+        for row in complexes["items"]:
+            self.assertEqual("".join(token["surface"] for token in row["tokens"]), server.normalize_name(row["name"]))
+        fullwidth = complexes["items"][7]
+        self.assertEqual(fullwidth["name"], "파크５차")
+        self.assertTrue(any(token["surface"] == "5차" for token in fullwidth["tokens"]))
+        core = json.loads((output / "data/core.json").read_text(encoding="utf-8"))
+        self.assertTrue(any(core["categories"][token[1]] == "number" for token in core["token_catalog"]))
+
+    @unittest.skipUnless(NODE, "Node.js is required for JavaScript/Python contract parity")
     def test_gis_recomputes_filtered_statistics_and_never_reuses_p_values(self):
         output = self.build()
         queries = [

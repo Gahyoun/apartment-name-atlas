@@ -2,6 +2,7 @@ import importlib.util
 from pathlib import Path
 import tempfile
 import unittest
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,6 +39,45 @@ class BackendTests(unittest.TestCase):
         self.assertEqual(result["series"][-1]["token_counts"]["파크"], 0)
         self.assertEqual(result["series"][-1]["token_shares"]["파크"], 0)
         self.assertEqual(result["series"][-1]["cumulative_total"], 2)
+
+    def test_numeric_designators_leave_rankings_but_preserve_names_and_denominators(self):
+        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록"]
+        for value in designators:
+            with self.subTest(value=value):
+                # The spelling rule also covers legacy tokens with a wrong category.
+                self.assertFalse(server.countable_token({"category": "unclassified", "canonical": value}))
+        self.assertFalse(server.countable_token({"category": "number", "canonical": "차수"}))
+        for value in ("파크", "e편한세상", "브랜드2"):
+            self.assertTrue(server.countable_token({"category": "brand", "canonical": value}))
+        dictionary = {**self.store.dictionary, "entries": [*self.store.dictionary["entries"], {"canonical": "브랜드2", "category": "brand"}]}
+        names = ["파크" + value for value in designators] + ["1", "e편한세상2차", "브랜드2"]
+        rows = [{**self.rows[0], "id": f"numeric-{index}", "name": name} for index, name in enumerate(names)]
+        with mock.patch.object(server, "load_dictionary", return_value=dictionary):
+            store = server.DataStore(records=rows)
+        selected = ",".join([*designators, "파크", "e편한세상", "브랜드2"])
+        result = store.analysis({"tokens": selected})
+        expected_tokens = {"파크", "e편한세상", "브랜드2"}
+        self.assertEqual(result["selected_tokens"], ["파크", "e편한세상", "브랜드2"])
+        self.assertEqual({row["token"] for row in result["top_tokens"]}, expected_tokens)
+        self.assertEqual(result["unique_token_count"], 3)
+        self.assertEqual((result["sample_count"], result["total_count"], result["valid_year_count"]), (len(rows), len(rows), len(rows)))
+        series = result["series"][0]
+        self.assertEqual((series["total_count"], series["cumulative_total"]), (len(rows), len(rows)))
+        self.assertEqual(series["token_counts"], {"파크": len(designators), "e편한세상": 1, "브랜드2": 1})
+        self.assertEqual(series["token_cumulative"], series["token_counts"])
+        self.assertEqual(series["token_shares"]["파크"], len(designators) / len(rows))
+        self.assertEqual({row["token"] for row in store.tokens({})["items"]}, expected_tokens)
+        self.assertEqual(store.tokens({"category": "number"})["total"], 0)
+        self.assertEqual(store.tokens({"token_q": "1차"})["items"], [])
+        numeric_only = store.analysis({"tokens": ",".join(designators)})
+        self.assertEqual(numeric_only["selected_tokens"], [])
+        self.assertEqual(numeric_only["series"][0]["token_counts"], {})
+        self.assertEqual(numeric_only["sample_count"], len(rows))
+        for original, public in zip(rows, store.complexes({"limit": "100"})["items"]):
+            self.assertEqual(public["name"], original["name"])
+            self.assertEqual("".join(token["surface"] for token in public["tokens"]), server.normalize_name(original["name"]))
+            if original["name"] != "브랜드2":
+                self.assertTrue(any(token["category"] == "number" for token in public["tokens"]))
 
     def test_zero_denominator_is_null_and_cumulative_is_monotonic(self):
         result = self.store.analysis({"sido": "서울특별시", "tokens": "파크,리버"})
