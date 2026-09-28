@@ -47,6 +47,7 @@
 
 ## 준비된 것
 
+- [브랜드·지명 제외 NLP 분석](docs/modifier-nlp.md): Kiwi 형태소 분석, 보호 사전, 최빈 수식어 후보와 연대별 포함 비율
 - [연구 설계](docs/research-plan.md): 질문, 분류, 지표, 검수, 단계별 작업
 - [데이터 출처](docs/data-sources.md): 전국 단지 기본정보와 명칭 이력의 공식 출처
 - [입력 규격](docs/data-contract.md): 단지 1개당 현재 이름 1건

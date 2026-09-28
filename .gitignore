@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv-*/
 .env
 .env.*
 work/
@@ -12,5 +13,7 @@ results/*
 !results/.gitkeep
 !results/initial-findings.md
 !results/initial-findings.json
+!results/modifier-analysis.md
+!results/modifier-analysis.json
 .DS_Store
 docs/DESIGN.reference.md

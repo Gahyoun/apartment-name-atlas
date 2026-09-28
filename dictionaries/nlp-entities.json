@@ -1,0 +1,1561 @@
+{
+  "version": "nlp-entities-1.1.0",
+  "observed_at": "2026-09-28",
+  "base_dictionary": "tokens.v1.json seed-1.1.0",
+  "policy": {
+    "scope": "상위 잔여 오염을 줄이는 보완 사전; 전국 브랜드 전수 목록 아님",
+    "matching": "정규화 원문에서 긴 표현을 먼저 보존; 기존 브랜드·기업 사전과 합쳐 사용",
+    "places": "각 단지 주소와 일치하는 행정지명은 문맥에 따라 제거. 공식 확인한 서울숲·북한산·위례·DMC·한강 등 제한된 고유 지명 표현은 별도 등록. 전국 주소 동명 전체를 전역 substring stoplist로 쓰지 않으며 실제 인접성·사업지구 편입을 추론하지 않음.",
+    "protected": "불확실한 전체 고유명 후보를 검수 큐로 보존한다. verified brand나 accepted modifier를 뜻하지 않으며 해당 제외의 민감도를 별도 보고한다.",
+    "company_caveat": "표면 기업명 후보 제거이며 단지 시공사·소유주·법적 그룹 관계를 확정하지 않음",
+    "existing_protections": [
+      "아이파크",
+      "파크드림",
+      "포레나",
+      "휴포레",
+      "카이저"
+    ],
+    "single_character_aliases": "린 등 한 글자 브랜드 전역 별칭 추가 금지",
+    "village_names": "마을·푸른마을·상림마을은 특정 단지군의 이름이라는 이유만으로 전역 지명 또는 브랜드 제외하지 않는다. 외부 지명/브랜드 근거가 없으면 일반 명칭 어휘의 중의성으로 남긴다."
+  },
+  "entries": [
+    {
+      "canonical": "주공",
+      "category": "company",
+      "aliases": [
+        "주공",
+        "대한주택공사"
+      ],
+      "source_url": "https://www.lh.or.kr/boardDownload.es?bid=ATT&list_no=571678&seq=4",
+      "reason": "공식 지속가능경영보고서의 대한주택공사 자기호칭 주공. 공급기관 표면명이며 단지의 실제 시공사 판정이 아니다.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "LH",
+      "category": "company",
+      "aliases": [
+        "LH",
+        "엘에이치",
+        "한국토지주택공사"
+      ],
+      "source_url": "https://www.lh.or.kr/",
+      "reason": "공식 공기업명과 약칭. 공급기관도 기업·조직 제외 범주에 포함.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "부영",
+      "category": "company",
+      "aliases": [
+        "부영",
+        "부영주택"
+      ],
+      "source_url": "https://www.booyoung.co.kr/main/main.htm",
+      "reason": "공식 그룹·주택사업 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "두산",
+      "category": "company",
+      "aliases": [
+        "두산",
+        "두산건설"
+      ],
+      "source_url": "https://www.doosanenc.com/",
+      "reason": "공식 건설사명. 웹 원문을 curl로 확인.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "대림",
+      "category": "company",
+      "aliases": [
+        "대림",
+        "대림산업",
+        "대림건설"
+      ],
+      "source_url": "https://www.daelim.co.kr/ko/pc/contact-us/sinmungo.do",
+      "reason": "공식 페이지에서 대림산업·대림건설의 이전 명칭 확인. 표면 기업명이며 현 법인관계 자동 추론 없음.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "동원",
+      "category": "company",
+      "aliases": [
+        "동원",
+        "동원개발"
+      ],
+      "source_url": "https://www.dongwonapt.co.kr/",
+      "reason": "동원개발 공식 건설·주택사업 페이지. 동명 다른 법인 가능성은 개별 단지 검수 대상.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "동아",
+      "category": "company",
+      "aliases": [
+        "동아",
+        "동아건설",
+        "동아건설산업"
+      ],
+      "source_url": "https://www.smgroup.co.kr/business/view.do?IDX=34",
+      "reason": "그룹 공식 건설사업의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "신동아",
+      "category": "company",
+      "aliases": [
+        "신동아",
+        "신동아건설"
+      ],
+      "source_url": "https://www.familie.co.kr/mobile/customer/center_info",
+      "reason": "파밀리에 공식 고객센터의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "우방",
+      "category": "company",
+      "aliases": [
+        "우방"
+      ],
+      "source_url": "https://woobang.co.kr/pr/bi",
+      "reason": "공식 기업 및 아이유쉘 BI 설명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "코오롱",
+      "category": "company",
+      "aliases": [
+        "코오롱",
+        "코오롱글로벌"
+      ],
+      "source_url": "https://www.kolon.com/kr/media/newsDtl?detailsKey=8242",
+      "reason": "그룹 공식 주택 브랜드 하늘채 보도자료의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "동부",
+      "category": "company",
+      "aliases": [
+        "동부",
+        "동부건설"
+      ],
+      "source_url": "https://dbcon.dongbu.co.kr/business/house.do",
+      "reason": "동부건설 공식 주택사업 기업명. 방위어와 동형이므로 실제 단지 문맥은 검수 대상.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "태영",
+      "category": "company",
+      "aliases": [
+        "태영",
+        "태영건설"
+      ],
+      "source_url": "https://www.taeyoung.com/",
+      "reason": "공식 건설사 홈페이지.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "한화",
+      "category": "company",
+      "aliases": [
+        "한화",
+        "한화건설"
+      ],
+      "source_url": "https://www.hanwha.com/profile/hanwha_businesses/aerospace-mechatronics.html",
+      "reason": "한화 공식 건설사업 설명의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "우미",
+      "category": "company",
+      "aliases": [
+        "우미",
+        "우미건설"
+      ],
+      "source_url": "https://www.woomi.com/kr-mo/business/house.do",
+      "reason": "공식 우미 주택사업 기업명. 단독 한 글자 린은 추가하지 않음.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "중흥",
+      "category": "company",
+      "aliases": [
+        "중흥",
+        "중흥건설"
+      ],
+      "source_url": "https://www.s-class.co.kr/",
+      "reason": "공식 브랜드 사이트의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "삼환",
+      "category": "company",
+      "aliases": [
+        "삼환",
+        "삼환기업"
+      ],
+      "source_url": "https://www.smgroup.co.kr/business/view.do?IDX=33",
+      "reason": "그룹 공식 건설부문 계열사 목록의 기업명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "쌍용",
+      "category": "company",
+      "aliases": [
+        "쌍용",
+        "쌍용건설"
+      ],
+      "source_url": "https://www.ssyenc.com/",
+      "reason": "공식 건설사 홈페이지.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "한라",
+      "category": "company",
+      "aliases": [
+        "한라",
+        "한라건설"
+      ],
+      "source_url": "https://www.hldni.com/",
+      "reason": "공식 건설사명. 한라산 등 자연·지명 합성어와 충돌하면 주소·전체어를 우선 검수해야 함.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "화성",
+      "category": "company",
+      "aliases": [
+        "화성산업",
+        "HS화성"
+      ],
+      "source_url": "https://www.parkdream.kr/index.php/main",
+      "reason": "공식 HS화성 기업명. 두 글자 화성은 도시명과 충돌해 자동 기업 별칭에서 제외.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "휴먼시아",
+      "category": "brand",
+      "aliases": [
+        "휴먼시아"
+      ],
+      "source_url": "https://www.lh.or.kr/boardDownload.es?bid=ATT&list_no=571678&seq=4",
+      "reason": "대한주택공사가 직접 발행한 지속가능경영보고서의 주거 브랜드 정의.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "어울림",
+      "category": "brand",
+      "aliases": [
+        "어울림",
+        "금호어울림"
+      ],
+      "source_url": "https://m.kumhoenc.com/company/company.asp",
+      "reason": "금호건설 공식 소개에서 아파트 브랜드로 명시.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "수자인",
+      "category": "brand",
+      "aliases": [
+        "수자인",
+        "한양수자인"
+      ],
+      "source_url": "https://www.sujain.co.kr/brand/brandstory",
+      "reason": "공식 브랜드 스토리.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "아이유쉘",
+      "category": "brand",
+      "aliases": [
+        "아이유쉘",
+        "우방아이유쉘"
+      ],
+      "source_url": "https://woobang.co.kr/pr/bi",
+      "reason": "우방 공식 BI에서 브랜드 합성어 설명.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "파밀리에",
+      "category": "brand",
+      "aliases": [
+        "파밀리에",
+        "신동아파밀리에"
+      ],
+      "source_url": "https://www.familie.co.kr/brand/introduction",
+      "reason": "공식 브랜드 소개.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "경남아너스빌",
+      "category": "brand",
+      "aliases": [
+        "경남아너스빌",
+        "아너스빌"
+      ],
+      "source_url": "https://www.smgroup.co.kr/business/view.do?IDX=33",
+      "reason": "공식 그룹 건설사업에서 경남기업 주거 브랜드로 명시.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "한신더휴",
+      "category": "brand",
+      "aliases": [
+        "한신더휴",
+        "더휴"
+      ],
+      "source_url": "https://www.hanshinc.com/",
+      "reason": "공식 기업 홈페이지의 한신더휴 브랜드·고객센터 연결.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "한신휴플러스",
+      "category": "brand",
+      "aliases": [
+        "한신휴플러스",
+        "휴플러스"
+      ],
+      "source_url": "https://www.hanshinc.com/info/info03.asp",
+      "reason": "공식 기업연혁에 주택·광고 브랜드 사용 확인.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "사랑으로",
+      "category": "brand",
+      "aliases": [
+        "사랑으로부영",
+        "부영사랑으로",
+        "사랑으로"
+      ],
+      "source_url": "https://www.booyoung.co.kr/pr/bi.htm",
+      "reason": "부영 공식 BI 페이지.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "e편한세상",
+      "category": "brand",
+      "aliases": [
+        "e-편한세상",
+        "E-편한세상",
+        "e‐편한세상"
+      ],
+      "source_url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001370870",
+      "reason": "광고캠페인 사례연구 원문 초록의 하이픈 표기를 추가. 기존 main 별칭을 대체하지 않음.",
+      "source_type": "primary_case_study",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "코아루",
+      "category": "brand",
+      "aliases": [
+        "코아루"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 토지주택연구원 공식 발행 연구보고서가 한국토지신탁 주택 브랜드로 정리.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 24,
+      "source_note": "한국토지주택공사 토지주택연구원 발행, 연구기획2023-099. 정부 공식 견해를 뜻하지 않음."
+    },
+    {
+      "canonical": "뜨란채",
+      "category": "brand",
+      "aliases": [
+        "뜨란채"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 연구원의 자체 공공주택 브랜드 연혁 설명. 뜰안채를 임의 별칭으로 합치지 않음.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 29,
+      "source_note": "한국토지주택공사 토지주택연구원 발행, 연구기획2023-099. 정부 공식 견해를 뜻하지 않음."
+    },
+    {
+      "canonical": "주공그린빌",
+      "category": "brand",
+      "aliases": [
+        "주공그린빌"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 토지주택연구원 보고서 인쇄 p.29가 그린빌을 2000년 출시한 공공분양 브랜드라고 명시. 일반 그린빌은 자동 제외하지 않고, 공급기관이 결합된 주공그린빌만 좁게 매칭.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 29,
+      "source_note": "한국토지주택공사 토지주택연구원 발행, 연구기획2023-099. 정부 공식 견해를 뜻하지 않음.",
+      "source_brand_canonical": "그린빌"
+    },
+    {
+      "canonical": "자연앤",
+      "category": "brand",
+      "aliases": [
+        "자연앤",
+        "자연&"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 연구보고서의 경기도시공사 자연& 브랜드. 일반 자연 단어는 제외하지 않음.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 24,
+      "source_note": "한국토지주택공사 토지주택연구원 발행, 연구기획2023-099. 정부 공식 견해를 뜻하지 않음."
+    },
+    {
+      "canonical": "웰카운티",
+      "category": "brand",
+      "aliases": [
+        "웰카운티"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 연구보고서가 인천도시공사 브랜드로 정리.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 24,
+      "source_note": "한국토지주택공사 토지주택연구원 발행, 연구기획2023-099. 정부 공식 견해를 뜻하지 않음."
+    },
+    {
+      "canonical": "리버티",
+      "category": "protected",
+      "aliases": [
+        "리버티"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "한솔솔파크",
+      "category": "protected",
+      "aliases": [
+        "한솔솔파크"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "대주파크빌",
+      "category": "protected",
+      "aliases": [
+        "대주파크빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "문영퀸즈파크",
+      "category": "protected",
+      "aliases": [
+        "문영퀸즈파크"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "파크리오",
+      "category": "protected",
+      "aliases": [
+        "파크리오"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "동원로얄듀크",
+      "category": "protected",
+      "aliases": [
+        "동원로얄듀크",
+        "로얄듀크"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음. 원자료 로얄듀크3차의 축약형 누출을 막기 위해 로얄듀크 전체어도 후보로 보존하며 bare 로얄은 제외하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "벽산블루밍",
+      "category": "protected",
+      "aliases": [
+        "벽산블루밍"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "풍림아이원",
+      "category": "protected",
+      "aliases": [
+        "풍림아이원"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "월드메르디앙",
+      "category": "protected",
+      "aliases": [
+        "월드메르디앙"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "현진에버빌",
+      "category": "protected",
+      "aliases": [
+        "현진에버빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "중앙하이츠",
+      "category": "protected",
+      "aliases": [
+        "중앙하이츠"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "한라비발디",
+      "category": "protected",
+      "aliases": [
+        "한라비발디"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "서희스타힐스",
+      "category": "protected",
+      "aliases": [
+        "서희스타힐스"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "우림필유",
+      "category": "protected",
+      "aliases": [
+        "우림필유"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "영무예다음",
+      "category": "protected",
+      "aliases": [
+        "영무예다음"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "쌍용스윗닷홈",
+      "category": "protected",
+      "aliases": [
+        "쌍용스윗닷홈"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "양우내안애",
+      "category": "protected",
+      "aliases": [
+        "양우내안애"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "한일유앤아이",
+      "category": "protected",
+      "aliases": [
+        "한일유앤아이"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "대주피오레",
+      "category": "protected",
+      "aliases": [
+        "대주피오레"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "한국아델리움",
+      "category": "protected",
+      "aliases": [
+        "한국아델리움"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "대원칸타빌",
+      "category": "protected",
+      "aliases": [
+        "대원칸타빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "삼정그린코아",
+      "category": "protected",
+      "aliases": [
+        "삼정그린코아"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "삼정그린뷰",
+      "category": "protected",
+      "aliases": [
+        "삼정그린뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "현대홈타운",
+      "category": "protected",
+      "aliases": [
+        "현대홈타운"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "동원베네스트",
+      "category": "protected",
+      "aliases": [
+        "동원베네스트"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "공식 원자료에 관측된 전체 명칭을 조각내지 않고 검수 큐에 보존. 브랜드 여부·계열 관계는 이 항목으로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "금성백조",
+      "category": "protected",
+      "aliases": [
+        "금성백조"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "골드클래스",
+      "category": "protected",
+      "aliases": [
+        "골드클래스"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "비스타동원",
+      "category": "protected",
+      "aliases": [
+        "비스타동원"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "서초포레스타",
+      "category": "protected",
+      "aliases": [
+        "서초포레스타"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "동일스위트",
+      "category": "protected",
+      "aliases": [
+        "동일스위트"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "스위트엠",
+      "category": "protected",
+      "aliases": [
+        "스위트엠"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "한솔리치빌",
+      "category": "protected",
+      "aliases": [
+        "한솔리치빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "브레뉴",
+      "category": "protected",
+      "aliases": [
+        "브레뉴"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명이다. 전체어를 검수 큐로 보존하고 내부 수식어를 따로 세지 않는다. 공식 브랜드 판정은 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "천년나무",
+      "category": "brand",
+      "aliases": [
+        "천년나무"
+      ],
+      "source_url": "https://www.codil.or.kr/filebank/original/RK/OTKCRK240295/OTKCRK240295.pdf",
+      "reason": "LH 토지주택연구원 발행 연구기획 2023-099 인쇄 p.160(PDF p.178)이 LH 공공임대 주택 브랜드로 명시. 천년+나무로 수식어 빈도를 분할하지 않음.",
+      "source_type": "official_research_report",
+      "provisional": false,
+      "verified_at": "2026-09-28",
+      "source_page": 160
+    },
+    {
+      "canonical": "금호베스트빌",
+      "category": "protected",
+      "aliases": [
+        "금호베스트빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "우성스마트시티뷰",
+      "category": "protected",
+      "aliases": [
+        "우성스마트시티뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "예미지",
+      "category": "protected",
+      "aliases": [
+        "예미지"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "동문굿모닝힐",
+      "category": "protected",
+      "aliases": [
+        "동문굿모닝힐"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "대성유니드",
+      "category": "protected",
+      "aliases": [
+        "대성유니드"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "성원상떼빌",
+      "category": "protected",
+      "aliases": [
+        "성원상떼빌"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "원자료에 관측된 긴 기업·브랜드 후보 또는 단지 고유명. 전체어를 검수 큐에 보존해 내부 일반 수식어 오염을 방지하며, 이 항목 자체는 공식 브랜드 판정이 아님.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "서울숲",
+      "category": "place",
+      "aliases": [
+        "서울숲"
+      ],
+      "source_url": "https://parks.seoul.go.kr/park/detailView.do?pIdx=5",
+      "reason": "서울시 공원 소개에서 확인한 고유 공원명. 서울+숲으로 분리하지 않고 전체 지명 표현을 제외한다. 아파트가 공원 인근임을 판정하지 않음.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "북한산",
+      "category": "place",
+      "aliases": [
+        "북한산"
+      ],
+      "source_url": "https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?menuNo=7020002&parkId=121500",
+      "reason": "국립공원공단에서 확인한 산·국립공원 고유명. 실제 조망·인접성은 이 사전으로 판정하지 않음.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "DMC",
+      "category": "place",
+      "aliases": [
+        "DMC",
+        "디지털미디어시티"
+      ],
+      "source_url": "https://seoulsolution.kr/sites/default/files/policy/%EC%83%81%EC%95%94%20DMC%EC%A1%B0%EC%84%B1.pdf",
+      "reason": "서울시 정책자료 PDF p.7–8의 디지털미디어시티(DMC) 권역명. 단지 소재지가 DMC 사업지구 안이라는 뜻은 아님.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "위례",
+      "category": "place",
+      "aliases": [
+        "위례신도시",
+        "위례"
+      ],
+      "source_url": "https://www.lh.or.kr/board.es?act=view&bid=0034&list_no=725764&mid=a10601020000",
+      "reason": "LH 공모에서 확인한 위례신도시 고유 지명. 표면 지명 제외이며 실제 지구 경계 안 여부는 확인하지 않음.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "한강",
+      "category": "place",
+      "aliases": [
+        "한강"
+      ],
+      "source_url": "https://hangang.seoul.go.kr/www/main.do",
+      "reason": "서울시 미래한강본부에서 확인한 하천 고유명. 일반 자연 수식어와 구분한다. 동명 기업·개별 고유명 가능성과 실제 하천 인접성은 단지별 추가 검수 대상.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "남한강",
+      "category": "place",
+      "aliases": [
+        "남한강"
+      ],
+      "source_url": "https://hangang.seoul.go.kr/www/contents/772.do?mid=585",
+      "reason": "서울시 한강의 물줄기 공식 설명의 고유 하천명. 한강보다 긴 표현을 먼저 보존한다.",
+      "source_type": "official_public_source",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "북한강",
+      "category": "protected",
+      "aliases": [
+        "북한강"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "한강을 포함한 전체 하천명 후보. 이번 원자료의 북한강(성원) 등을 조각내지 않고 검수 큐에 보존.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "남산",
+      "category": "protected",
+      "aliases": [
+        "남산"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "전국 여러 산과 동의 이름에 쓰이는 지명·고유명 후보로 일반 수식어 순위에서 보류. 특정 서울 남산과의 관계를 자동 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "센텀",
+      "category": "protected",
+      "aliases": [
+        "센텀"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "부산 권역명과 전국 단지의 프리미엄 표현이 중첩되는 모호한 고유명 후보. 모든 사용을 지명으로 확정하지 않고 검수 큐로 보류.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "중흥S클래스",
+      "category": "brand",
+      "aliases": [
+        "중흥에스-클래스",
+        "중흥s-클래스",
+        "중흥s클래스"
+      ],
+      "source_url": "https://www.s-class.co.kr/",
+      "reason": "공식 중흥S-클래스 브랜드의 원자료 한글 에스+하이픈 및 소문자 s 표기를 보완. 중흥을 제거한 뒤 클래스를 일반어로 세는 누출 방지.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "스타클래스",
+      "category": "brand",
+      "aliases": [
+        "스타클래스",
+        "극동스타클래스"
+      ],
+      "source_url": "https://www.kukdong.co.kr/BI",
+      "reason": "극동건설 공식 BI 페이지가 스타클래스의 주거공간 브랜드 심볼과 명칭을 직접 설명. 스타와 클래스로 나누어 집계하지 않음.",
+      "source_type": "official_corporate_or_brand_website",
+      "provisional": false,
+      "verified_at": "2026-09-28"
+    },
+    {
+      "canonical": "동일하이빌",
+      "category": "protected",
+      "aliases": [
+        "동일하이빌"
+      ],
+      "source_url": "https://highvillcompany.com/info/post_1.php",
+      "reason": "동일토건 공식 사업소개에서 여러 지역의 동일하이빌 명칭 사용을 확인. 현재 감사에서는 전체 기업 결합 브랜드 후보를 보존하고 하이·빌로 나누지 않음. 브랜드 출시·계열 관계까지 이 항목으로 확정하지 않음.",
+      "source_type": "official_corporate_name_evidence",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "우림루미아트",
+      "category": "protected",
+      "aliases": [
+        "우림루미아트"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "상위 순위 원문 감사에서 발견한 기업명과 결합된 브랜드 후보 전체어. 내부 아트·스카이·뷰·골든을 일반 수식어로 분절하는 누출을 막도록 검수 큐로 보존. 이번 감사에서 공식 BI 원문을 확인하지 못했으므로 브랜드로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "신명스카이뷰",
+      "category": "protected",
+      "aliases": [
+        "신명스카이뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "상위 순위 원문 감사에서 발견한 기업명과 결합된 브랜드 후보 전체어. 내부 아트·스카이·뷰·골든을 일반 수식어로 분절하는 누출을 막도록 검수 큐로 보존. 이번 감사에서 공식 BI 원문을 확인하지 못했으므로 브랜드로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "SK리더스뷰",
+      "category": "protected",
+      "aliases": [
+        "SK리더스뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "상위 순위 원문 감사에서 발견한 기업명과 결합된 브랜드 후보 전체어. 내부 아트·스카이·뷰·골든을 일반 수식어로 분절하는 누출을 막도록 검수 큐로 보존. 이번 감사에서 공식 BI 원문을 확인하지 못했으므로 브랜드로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "삼한골든뷰",
+      "category": "protected",
+      "aliases": [
+        "삼한골든뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "상위 순위 원문 감사에서 발견한 기업명과 결합된 브랜드 후보 전체어. 내부 아트·스카이·뷰·골든을 일반 수식어로 분절하는 누출을 막도록 검수 큐로 보존. 이번 감사에서 공식 BI 원문을 확인하지 못했으므로 브랜드로 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "데자뷰",
+      "category": "protected",
+      "aliases": [
+        "데자뷰",
+        "데쟈뷰"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "데자뷰/데쟈뷰 전체어의 내부 뷰를 일반 view 수식어로 단정하지 않기 위한 분절 보호. 원자료 동원데자뷰·데쟈뷰아파트 등의 명칭 증거이며 기업 브랜드 관계를 확정하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    },
+    {
+      "canonical": "노르웨이숲",
+      "category": "protected",
+      "aliases": [
+        "유림노르웨이숲",
+        "중마노르웨이숲"
+      ],
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "reason": "유림노르웨이숲 및 중마노르웨이숲은 브랜드 후보 전체 명칭으로 보존. 공식 분양 브랜드 페이지는 확인했으나 이미지 본문의 브랜드 정의까지 확인하지 못하여 확정 brand 대신 review로 둠. 일반 숲 전체를 제외하지 않음.",
+      "source_type": "official_dataset_name_evidence_only",
+      "provisional": true,
+      "verified_at": "2026-09-28",
+      "review_required": true
+    }
+  ],
+  "review": [
+    {
+      "canonical": "대동",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "청구",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "성원",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "화성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "제일",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "경남",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "벽산",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "삼우",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동신",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대원",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "삼호",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동남",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "금강",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "효성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한일",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동산",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "극동",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대주",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "건영",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "삼정",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "중앙",
+      "reason": "일반 위치 표현·중앙동 주소지명·기업명 가능성이 겹친다. 주소 일치 지명과 중앙하이츠 등 전체 고유명만 별도 처리하며 bare 중앙은 검수.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "월드",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "보성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한솔",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "풍림",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "진흥",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동양",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "성우",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "영남",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "영진",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "이화",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한국",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대명",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "선경",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대신",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "광명",
+      "reason": "도시명·주소지명과 기업/개별 단지명이 겹친다. 주소가 실제 광명시인 경우 등 주소 일치 문맥에서만 지명 제외하며 전역 기업명으로 단정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "대진",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "정우",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "삼보",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "협성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동문",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "고려",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동일",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "금성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "신우",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "미성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한주",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "명성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "신성",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "럭키",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "미도",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "신원",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동서",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "덕산",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "동화",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "신일",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "삼부",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "한울",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "신안",
+      "reason": "고빈도 잔여 기업명 의심 또는 지명·일반 고유명 중의성. 이번 사전에서 자동 기업으로 확정하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "파크빌",
+      "reason": "여러 기업·개별 단지에서 결합되는 표현이라 전역 브랜드/보호어로 제외하지 않음. 대주파크빌 등 긴 명칭만 보호하고 파크+빌 분절은 문맥 검수.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "상록",
+      "reason": "일반 자연 표현·지명·공급기관 명칭과 중의적이므로 자동 기업/지명 제외하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "해오름",
+      "reason": "일반 자연 표현과 주소 지명 또는 개별 고유명으로 중의적이므로 자동 기업/지명 제외하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    },
+    {
+      "canonical": "청솔",
+      "reason": "일반 자연 표현과 지명·기업/개별 고유명 가능성이 겹치므로 자동 기업/지명 제외하지 않음.",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do"
+    }
+  ]
+}

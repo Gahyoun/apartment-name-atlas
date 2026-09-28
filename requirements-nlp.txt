@@ -1,0 +1,2 @@
+kiwipiepy==0.24.0
+kiwipiepy_model==0.24.0
