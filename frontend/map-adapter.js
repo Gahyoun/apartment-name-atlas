@@ -1,15 +1,18 @@
 // Display providers share the same verified coordinates and GIS geometry.
 // Kakao's browser JavaScript key is delivered by /api/map-config at runtime.
+import { cleanApartmentName } from './name-cleaning.js';
+
 const KAKAO_TIMEOUT_MS = 8000;
 let kakaoSDKPromise;
 
 const tokenOf = (token) => token.canonical || token.surface || token.token || '';
+const displayName = (item) => (item.name_clean ?? cleanApartmentName(item.name)) || '명칭 미확인';
 const isHighlighted = (item, selected) => (item.tokens || []).some((token) => selected.includes(tokenOf(token)));
 const popupContent = (item) => {
   const content = document.createElement('div');
   content.className = 'map-info-window';
   const title = document.createElement('strong');
-  title.textContent = item.name || '';
+  title.textContent = displayName(item);
   const description = document.createElement('p');
   description.textContent = [item.sigungu, item.dong, item.approval_year ? `${item.approval_year}년` : ''].filter(Boolean).join(' · ');
   content.append(title, description);
@@ -137,7 +140,7 @@ class KakaoMapAdapter {
     const markers = items.map((item) => {
       const marker = new this.maps.Marker({
         position: new this.maps.LatLng(item.lat, item.lon),
-        title: item.name,
+        title: displayName(item),
         image: this.image(isHighlighted(item, selected)),
       });
       this.maps.event.addListener(marker, 'click', () => {

@@ -21,6 +21,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from analyze import load_dictionary, normalize_name, tokenize  # noqa: E402
+from name_cleaning import clean_apartment_name  # noqa: E402
 
 TAXONOMY = [
     {"key": "company", "label": "기업·그룹"}, {"key": "brand", "label": "브랜드"},
@@ -175,7 +176,8 @@ def has_coordinates(record: dict) -> bool:
 
 def numeric_designator(value: str) -> bool:
     """Match the entire number/phase label, never digits inside a proper name."""
-    return re.fullmatch(r"(?:제)?[0-9]+(?:차|단지|블록|동)?", normalize_name(value)) is not None
+    text = normalize_name(value)
+    return bool(re.search(r"[0-9]", text) and re.fullmatch(r"[0-9제차단지블록동호층번지()\[\]{},·;:/~\-–—.ㆍ]+", text))
 
 
 def countable_token(token: dict) -> bool:
@@ -204,6 +206,7 @@ def prepare_records(records: list[dict], dictionary: dict, metadata: dict) -> li
         if year is not None and (type(year) is not int or not 1800 <= year <= 2100):
             raise ValueError(f"단지 자료 {line}행: approval_year는 1800~2100 정수 또는 null이어야 합니다.")
         record = {**raw, "id": identity, "source_url": source_url, "approval_year": year}
+        record["name_clean"] = clean_apartment_name(record["name"])
         for key in ("sido", "sigungu", "dong", "dong_code"):
             record[key] = str(raw.get(key) or "").strip()
         for key in ("lat", "lon"):

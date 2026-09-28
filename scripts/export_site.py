@@ -25,6 +25,7 @@ CORE_FIELDS = {
     "tokens", "name_normalized", "needs_review", "source_url", "is_demo",
 }
 PUBLIC_DETAIL_FIELDS = {
+    "name_clean",
     "name_variants", "name_basis", "name_disagreement", "source_id", "pnu", "address", "road_address",
     "approval_date", "year_basis", "building_count", "household_count", "observed_at",
     "coordinate_basis", "coordinate_match_basis", "coordinate_match_method", "coordinate_observed_at",

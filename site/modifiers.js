@@ -1,3 +1,5 @@
+import { cleanApartmentName } from './name-cleaning.js';
+
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
 const state = { data: null, rows: [], visible: [], selected: null, heatmapMode: 'share', decadeRanks: new Map(), loading: false };
@@ -128,6 +130,14 @@ function markedName(name, token) {
   return index < 0 ? escape(text) : `${escape(text.slice(0, index))}<mark>${escape(text.slice(index, index + token.length))}</mark>${escape(text.slice(index + token.length))}`;
 }
 
+function exampleName(example) {
+  return (example.name_clean ?? cleanApartmentName(example.name)) || '명칭 미확인';
+}
+
+function exampleOriginal(example) {
+  return exampleName(example) !== example.name ? `<details class="source-variants"><summary>원문 확인</summary><p class="field-help">${escape(example.name)}</p></details>` : '';
+}
+
 function renderDetail(token) {
   const row = rowFor(token);
   if (!row) return;
@@ -140,7 +150,7 @@ function renderDetail(token) {
   $('#token-context-review').textContent = [strictCount != null ? `미검토 고유명·외국어 태그 이웃을 제외하면 ${count(strictCount)}개` : '', reviewCount != null ? `문맥 검토 조건 때문에 추가된 단지 ${count(reviewCount)}개` : ''].filter(Boolean).join(' · ') + '입니다. 신뢰구간이 아닌 분절 조건에 따른 차이이며, 이웃 표현이 브랜드로 확정되었다는 뜻은 아닙니다.';
   const examples = row.examples.slice(0, 8);
   $('#example-count').textContent = examples.length ? `${examples.length}개 표시` : '';
-  $('#token-examples').innerHTML = examples.length ? examples.map((example) => `<article><p class="example-original">${markedName(example.name, example.surface || token)}</p><p class="example-address"><span>${escape([example.sido, example.sigungu, example.dong].filter(Boolean).join(' ') || '지역 미기재')}</span><span class="example-year">${Number.isInteger(example.year) ? `${example.year}년 승인` : '승인연도 미상'}</span></p></article>`).join('') : '<p class="muted">이 표현의 원문 예시가 결과 자료에 포함되지 않았습니다. 전체 이름 탐색에서 직접 확인해 주세요.</p>';
+  $('#token-examples').innerHTML = examples.length ? examples.map((example) => `<article><p class="example-original">${markedName(exampleName(example), example.surface || token)}</p><p class="example-address"><span>${escape([example.sido, example.sigungu, example.dong].filter(Boolean).join(' ') || '지역 미기재')}</span><span class="example-year">${Number.isInteger(example.year) ? `${example.year}년 승인` : '승인연도 미상'}</span></p>${exampleOriginal(example)}</article>`).join('') : '<p class="muted">이 표현의 이름 예시가 결과 자료에 포함되지 않았습니다. 전체 이름 탐색에서 직접 확인해 주세요.</p>';
   $('#example-note').textContent = row.examples.length > 8 ? `제공된 ${count(row.examples.length)}개 예시 중 8개를 표시합니다. 예시 목록은 대표 표본이 아닙니다.` : '원자료에서 확인한 일부 예시입니다. 예시 목록은 대표 표본이 아니며 고유명·중의어가 남아 있을 수 있습니다.';
   renderMiniChart(row);
   $$('[data-token]').forEach((button) => {

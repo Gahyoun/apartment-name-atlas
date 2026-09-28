@@ -161,7 +161,7 @@ class StaticExportTests(unittest.TestCase):
 
     @unittest.skipUnless(NODE, "Node.js is required for JavaScript/Python contract parity")
     def test_numeric_designators_are_hidden_by_both_apis_without_deleting_raw_tokens(self):
-        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록"]
+        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록", "(101동)", "(101동,102동)", "(432-921)", "（１０１동）"]
         names = ["파크" + value for value in designators] + ["1", "e편한세상2차", "브랜드2"]
         self.rows = [{**self.rows[0], "id": f"numeric-{index}", "name": name, "approval_year": 2000} for index, name in enumerate(names)]
         dictionary = {**self.store.dictionary, "entries": [*self.store.dictionary["entries"], {"canonical": "브랜드2", "category": "brand"}]}
@@ -205,6 +205,29 @@ class StaticExportTests(unittest.TestCase):
         self.assertTrue(any(token["surface"] == "5차" for token in fullwidth["tokens"]))
         core = json.loads((output / "data/core.json").read_text(encoding="utf-8"))
         self.assertTrue(any(core["categories"][token[1]] == "number" for token in core["token_catalog"]))
+
+    @unittest.skipUnless(NODE, "Node.js is required for JavaScript/Python contract parity")
+    def test_cleaned_names_survive_detail_shards_without_merging_records(self):
+        names = ["그린(101동)", "그린(102동)", "(432-921)", "그린(101동,임대)"]
+        self.rows = [{**self.rows[0], "id": f"clean-{index}", "name": name, "approval_year": 2000} for index, name in enumerate(names)]
+        self.store = server.DataStore(records=self.rows)
+        output = self.build()
+        queries = [
+            {"path": "/api/complexes", "params": {"limit": "100"}},
+            {"path": "/api/analysis", "params": {"tokens": "그린,101동"}},
+        ]
+        complexes, analysis = self.run_worker(output, queries)
+        self.assertEqual(complexes, self.store.complexes({"limit": "100"}))
+        self.assertEqual(analysis, self.store.analysis({"tokens": "그린,101동"}))
+        self.assertEqual([row["name"] for row in complexes["items"]], names)
+        self.assertEqual([row["name_clean"] for row in complexes["items"]], ["그린", "그린", "", "그린(임대)"])
+        self.assertEqual(len({row["id"] for row in complexes["items"]}), 4)
+        self.assertEqual(analysis["sample_count"], 4)
+        self.assertEqual(analysis["series"][0]["token_counts"], {"그린": 3})
+        self.assertEqual(analysis["series"][0]["token_shares"]["그린"], 0.75)
+        self.assertTrue(any(token["surface"] == "101동" for token in complexes["items"][0]["tokens"]))
+        core = json.loads((output / "data/core.json").read_text(encoding="utf-8"))
+        self.assertIn("name_clean", core["detail_fields"])
 
     @unittest.skipUnless(NODE, "Node.js is required for JavaScript/Python contract parity")
     def test_gis_recomputes_filtered_statistics_and_never_reuses_p_values(self):

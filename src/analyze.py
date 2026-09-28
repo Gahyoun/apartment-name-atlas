@@ -14,6 +14,11 @@ import tempfile
 import unicodedata
 from urllib.parse import urlsplit
 
+try:
+    from src.name_cleaning import JE_ENDING_WORDS
+except ModuleNotFoundError:  # Direct CLI execution from src/.
+    from name_cleaning import JE_ENDING_WORDS
+
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DICTIONARY = ROOT / "dictionaries" / "tokens.v1.json"
@@ -161,9 +166,12 @@ def tokenize(name_raw: str, dictionary: dict) -> tuple[str, list[dict]]:
             while start != -1:
                 candidates.append((start, start + len(word), entry))
                 start = name.find(word, start + 1)
-    for match in re.finditer(r"(?:제)?[0-9]+(?:차|단지|블록|동)?", name):
-        candidates.append((match.start(), match.end(), {
-            "canonical": match.group(), "category": "number",
+    for match in re.finditer(r"(?:제)?[0-9]+(?:차|단지|블록|동|호|층|번지)?", name):
+        start = match.start()
+        if match.group().startswith("제") and name[:start + 1].endswith(JE_ENDING_WORDS):
+            start += 1
+        candidates.append((start, match.end(), {
+            "canonical": name[start:match.end()], "category": "number",
         }))
     occupied = [False] * len(name)
     accepted = {}

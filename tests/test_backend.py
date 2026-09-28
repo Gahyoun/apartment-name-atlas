@@ -41,7 +41,7 @@ class BackendTests(unittest.TestCase):
         self.assertEqual(result["series"][-1]["cumulative_total"], 2)
 
     def test_numeric_designators_leave_rankings_but_preserve_names_and_denominators(self):
-        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록"]
+        designators = ["1", "2", "1차", "2차", "제3차", "101동", "4단지", "５차", "6블록", "(101동)", "(101동,102동)", "(432-921)", "（１０１동）"]
         for value in designators:
             with self.subTest(value=value):
                 # The spelling rule also covers legacy tokens with a wrong category.
@@ -78,6 +78,24 @@ class BackendTests(unittest.TestCase):
             self.assertEqual("".join(token["surface"] for token in public["tokens"]), server.normalize_name(original["name"]))
             if original["name"] != "브랜드2":
                 self.assertTrue(any(token["category"] == "number" for token in public["tokens"]))
+
+    def test_cleaned_names_preserve_distinct_complex_ids_and_raw_metadata(self):
+        names = ["그린(101동)", "그린(102동)", "(432-921)", "그린(101동,임대)"]
+        rows = [{**self.rows[0], "id": f"clean-{index}", "name": name} for index, name in enumerate(names)]
+        store = server.DataStore(records=rows)
+        public = store.complexes({"limit": "100"})
+        self.assertEqual(public["total"], len(rows))
+        self.assertEqual([row["id"] for row in public["items"]], [row["id"] for row in rows])
+        self.assertEqual([row["name"] for row in public["items"]], names)
+        self.assertEqual([row["name_clean"] for row in public["items"]], ["그린", "그린", "", "그린(임대)"])
+        self.assertEqual([row["name"] for row in rows], names)
+        for row in public["items"]:
+            self.assertEqual("".join(token["surface"] for token in row["tokens"]), server.normalize_name(row["name"]))
+            self.assertTrue(any(token["category"] == "number" for token in row["tokens"]))
+        result = store.analysis({"tokens": "그린,101동"})
+        self.assertEqual((result["sample_count"], result["series"][0]["cumulative_total"]), (4, 4))
+        self.assertEqual(result["series"][0]["token_counts"], {"그린": 3})
+        self.assertNotIn("101동", {row["token"] for row in result["top_tokens"]})
 
     def test_zero_denominator_is_null_and_cumulative_is_monotonic(self):
         result = self.store.analysis({"sido": "서울특별시", "tokens": "파크,리버"})

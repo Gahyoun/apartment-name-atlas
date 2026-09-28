@@ -12,6 +12,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
+from src.name_cleaning import clean_apartment_name, VERSION as NAME_CLEANING_VERSION
 
 
 def read_json(path):
@@ -80,7 +81,7 @@ def build_report(records, result, args):
         rows.append({
             'token': token, 'count': len(ids), 'share': len(ids) / len(records),
             'strict_count': len(strict_ids[token]), 'context_only_count': len(ids - strict_ids[token]),
-            'examples': [{**{k: r[k] for k in ('id', 'name', 'sido', 'sigungu', 'dong')}, 'year': r.get('approval_year'), 'surface': example_surfaces[(token, r['id'])]} for r in examples],
+            'examples': [{**{k: r[k] for k in ('id', 'name', 'sido', 'sigungu', 'dong')}, 'name_clean': clean_apartment_name(r['name']), 'year': r.get('approval_year'), 'surface': example_surfaces[(token, r['id'])]} for r in examples],
             'by_decade': [{'decade': d, 'count': by_decade[d], 'total': total, 'share': by_decade[d] / total} for d, total in sorted(decade_totals.items())],
             'by_region': [{'sido': sido, 'count': count} for sido, count in by_region.most_common()],
         })
@@ -94,6 +95,7 @@ def build_report(records, result, args):
         '고유명과 일반어는 중의적입니다. 미검토 형태소·고유명 후보는 확정 후보 순위에서 보류하므로 모든 한국어 단어의 전수 순위가 아닙니다.',
         '순위에는 미검토 고유명·외국어와 이웃한 수식어도 포함합니다. 엄격 집계는 그러한 이웃이 없는 잔여 구간에서만 셉니다. 두 기준 모두 브랜드·지명 제거의 완전성이나 명명 의도를 보증하지 않습니다.',
         '로얄/로열은 로열, 씨티/시티는 시티로 통합합니다. 리버뷰·파크뷰 등은 리버/파크와 뷰로 나누며 원문 표기는 보존합니다.',
+        '예시 표기에서 동·호·층 번호, 차수, 숫자만 있는 괄호·지번 부가정보를 제거합니다. 원문과 단지 ID는 보존하며 정리한 이름이 같아져도 단지를 합치지 않습니다.',
         '브랜드 내부의 자연 표현은 제외합니다. 예: 아이파크의 파크, 꿈에그린의 그린, 포레나의 포레는 세지 않습니다.',
         '사진의 작명법은 가설입니다. 이름 빈도는 주변 시설 존재나 조망을 증명하지 않습니다.',
         '이 페이지는 전국 스냅샷입니다. 기존 지도 페이지와 분절 규칙이 달라 토큰별 수가 다를 수 있습니다.',
@@ -118,6 +120,7 @@ def build_report(records, result, args):
         'input_sha256': hashlib.sha256(args.input.read_bytes()).hexdigest(),
         'entity_dictionary_version': (read_json(args.entities) or {}).get('version'),
         'accepted_terms_version': (read_json(args.accepted_terms) or {}).get('version'),
+        'name_cleaning_version': NAME_CLEANING_VERSION,
     }
     output = {'meta': meta, 'ranking': rows, 'decades': [{'decade': d, 'total': n} for d, n in sorted(decade_totals.items())], 'meme_tokens': meme, 'form_ranking': forms,
               'excluded_counts_top25_per_category': {k: v[:25] for k, v in result.get('excluded_counts', {}).items()}, 'candidate_ranking': result.get('candidate_ranking', [])[:100]}
@@ -129,13 +132,13 @@ def build_report(records, result, args):
     (public / 'modifier-analysis.json').write_text(json.dumps(output, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     lines = ['# 브랜드와 지명을 제외한 아파트 이름 NLP', '', f"전국 {len(records):,}개 단지의 현재 공시가격 DB 이름을 분석했다. 빈도는 토큰이 한 번 이상 나타나는 단지 수이고, 비율의 분모는 전체 {len(records):,}개다.", '',
              f"형태소 분석과 어휘 검수를 거쳐 {len(rows)}종을 집계했다. 하나 이상의 후보가 추출된 단지는 {len(set().union(*token_ids.values())):,}개이며, 단어가 추출되지 않은 단지도 전체 분모에 포함한다.", '',
-             '## 수식어 후보 최빈순', '', '| 순위 | 토큰 | 단지 수 | 전체 비율 | 엄격 조건 단지 수 | 원문 예시 |', '|---|---|---:|---:|---:|---|']
+             '## 수식어 후보 최빈순', '', '| 순위 | 토큰 | 단지 수 | 전체 비율 | 엄격 조건 단지 수 | 정리한 이름 예시 |', '|---|---|---:|---:|---:|---|']
     previous_count, rank = None, 0
     for index, row in enumerate(rows[:30], 1):
         if row['count'] != previous_count:
             rank = index
             previous_count = row['count']
-        examples = ', '.join(r['name'].replace('|', '\\|') for r in row['examples'][:2])
+        examples = ', '.join(r['name_clean'].replace('|', '\\|') for r in row['examples'][:2])
         lines.append(f"| {rank} | {row['token']} | {row['count']:,} | {row['share']:.2%} | {row['strict_count']:,} | {examples} |")
     lines += ['', '## 사용승인 연대별 포함 비율', '', '| 토큰 | 1980년대 | 1990년대 | 2000년대 | 2010년대 | 2020–2025년 |', '|---|---:|---:|---:|---:|---:|']
     for token in ['그린', '파크', '로얄', '로열', '타운', '팰리스', '센트럴', '리버', '포레', '포레스트', '장미', '청솔']:

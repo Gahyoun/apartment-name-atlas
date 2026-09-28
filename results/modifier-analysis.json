@@ -52,16 +52,16 @@
     "coverage": {
       "complex_count": 46385,
       "accepted_complex_count": 10808,
-      "review_complex_count": 37854,
-      "occurrence_count": 118134,
+      "review_complex_count": 37850,
+      "occurrence_count": 118115,
       "accepted_occurrence_count": 13319,
       "strict_accepted_complex_count": 8256,
       "strict_accepted_occurrence_count": 10381,
       "context_review_complex_count": 2572,
       "context_review_occurrence_count": 2938,
-      "review_occurrence_count": 43315,
-      "excluded_occurrence_count": 61500,
-      "unique_residuals_analyzed": 18679,
+      "review_occurrence_count": 43291,
+      "excluded_occurrence_count": 61505,
+      "unique_residuals_analyzed": 18675,
       "entity_review_occurrence_count": 3942
     },
     "coverage_note": "검수 어휘 69종 중 하나 이상이 추출된 단지는 10,808개입니다. 이는 사전과 분절 조건에 따른 어휘 범위이며, 나머지 단지에 수식어가 없다는 뜻은 아닙니다.",
@@ -79,6 +79,7 @@
       "고유명과 일반어는 중의적입니다. 미검토 형태소·고유명 후보는 확정 후보 순위에서 보류하므로 모든 한국어 단어의 전수 순위가 아닙니다.",
       "순위에는 미검토 고유명·외국어와 이웃한 수식어도 포함합니다. 엄격 집계는 그러한 이웃이 없는 잔여 구간에서만 셉니다. 두 기준 모두 브랜드·지명 제거의 완전성이나 명명 의도를 보증하지 않습니다.",
       "로얄/로열은 로열, 씨티/시티는 시티로 통합합니다. 리버뷰·파크뷰 등은 리버/파크와 뷰로 나누며 원문 표기는 보존합니다.",
+      "예시 표기에서 동·호·층 번호, 차수, 숫자만 있는 괄호·지번 부가정보를 제거합니다. 원문과 단지 ID는 보존하며 정리한 이름이 같아져도 단지를 합치지 않습니다.",
       "브랜드 내부의 자연 표현은 제외합니다. 예: 아이파크의 파크, 꿈에그린의 그린, 포레나의 포레는 세지 않습니다.",
       "사진의 작명법은 가설입니다. 이름 빈도는 주변 시설 존재나 조망을 증명하지 않습니다.",
       "이 페이지는 전국 스냅샷입니다. 기존 지도 페이지와 분절 규칙이 달라 토큰별 수가 다를 수 있습니다."
@@ -86,10 +87,11 @@
     "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
     "source_snapshot_date": "2026-08-31",
     "observed_at": "2026-09-28",
-    "generated_at": "2026-09-28T09:16:51.173378+00:00",
+    "generated_at": "2026-09-28T09:41:34.071491+00:00",
     "input_sha256": "a8247d0c86443df8e797c451c7ace8b0a7d02790749c49d2576fb044fe1dde9f",
     "entity_dictionary_version": "nlp-entities-1.1.0",
-    "accepted_terms_version": "modifier-review-1.0.0"
+    "accepted_terms_version": "modifier-review-1.0.0",
+    "name_cleaning_version": "numeric-annotations-1.0.0"
   },
   "ranking": [
     {
@@ -105,6 +107,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "신당동",
+          "name_clean": "푸른마을",
           "year": 2000,
           "surface": "마을"
         },
@@ -114,6 +117,7 @@
           "sido": "부산광역시",
           "sigungu": "영도구",
           "dong": "봉래동2가",
+          "name_clean": "봉래마을",
           "year": 2000,
           "surface": "마을"
         },
@@ -123,6 +127,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "검사동",
+          "name_clean": "강변마을",
           "year": 2001,
           "surface": "마을"
         },
@@ -132,6 +137,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "관교동",
+          "name_clean": "신비마을",
           "year": 1994,
           "surface": "마을"
         },
@@ -141,6 +147,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "학동",
+          "name_clean": "학1마을",
           "year": 2007,
           "surface": "마을"
         },
@@ -150,6 +157,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "삼성동",
+          "name_clean": "솔랑마을",
           "year": 2000,
           "surface": "마을"
         }
@@ -282,6 +290,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "신영동",
+          "name_clean": "대아파크빌",
           "year": 1998,
           "surface": "파크"
         },
@@ -291,6 +300,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "동남파크",
           "year": 1988,
           "surface": "파크"
         },
@@ -300,6 +310,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "청라센트럴파크",
           "year": 2008,
           "surface": "파크"
         },
@@ -309,6 +320,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시한신더휴스카이파크",
           "year": 2019,
           "surface": "파크"
         },
@@ -318,6 +330,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "동명동",
+          "name_clean": "동명파크맨션",
           "year": 1989,
           "surface": "파크"
         },
@@ -327,6 +340,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "문화동",
+          "name_clean": "센트럴파크",
           "year": 2007,
           "surface": "파크"
         }
@@ -459,6 +473,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "숭인동",
+          "name_clean": "동문타운",
           "year": 2000,
           "surface": "타운"
         },
@@ -468,6 +483,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동1가",
+          "name_clean": "대림에이스타운",
           "year": 1994,
           "surface": "타운"
         },
@@ -477,6 +493,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "동인동1가",
+          "name_clean": "시티타운",
           "year": 1997,
           "surface": "타운"
         },
@@ -486,6 +503,7 @@
           "sido": "인천광역시",
           "sigungu": "동구",
           "dong": "만석동",
+          "name_clean": "만석비치타운주공",
           "year": 2002,
           "surface": "타운"
         },
@@ -495,6 +513,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "금호두암타운",
           "year": 1993,
           "surface": "타운"
         },
@@ -504,6 +523,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "가양동",
+          "name_clean": "평화타운맨션",
           "year": 1990,
           "surface": "타운"
         }
@@ -636,6 +656,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "창신동",
+          "name_clean": "그린",
           "year": 2002,
           "surface": "그린"
         },
@@ -645,6 +666,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동3가",
+          "name_clean": "청탑그린빌라",
           "year": 2003,
           "surface": "그린"
         },
@@ -654,6 +676,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "대봉동",
+          "name_clean": "대봉화성그린빌",
           "year": 1996,
           "surface": "그린"
         },
@@ -663,6 +686,7 @@
           "sido": "인천광역시",
           "sigungu": "동구",
           "dong": "화수동",
+          "name_clean": "화도진그린빌",
           "year": 2001,
           "surface": "그린"
         },
@@ -672,6 +696,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "두암그린파크",
           "year": 1995,
           "surface": "그린"
         },
@@ -681,6 +706,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "옥계동",
+          "name_clean": "한양그린맨션",
           "year": 1985,
           "surface": "그린"
         }
@@ -813,6 +839,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "인의동",
+          "name_clean": "효성쥬얼리시티",
           "year": 2006,
           "surface": "시티"
         },
@@ -822,6 +849,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "대청동4가",
+          "name_clean": "동호이루마시티",
           "year": 2006,
           "surface": "시티"
         },
@@ -831,6 +859,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "동인동1가",
+          "name_clean": "시티타운",
           "year": 1997,
           "surface": "시티"
         },
@@ -840,6 +869,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "스카이시티자이",
           "year": 2018,
           "surface": "시티"
         },
@@ -849,6 +879,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "치평동",
+          "name_clean": "상무지구리채시티",
           "year": 2014,
           "surface": "시티"
         },
@@ -858,6 +889,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "인동",
+          "name_clean": "구룡시티빌",
           "year": 2013,
           "surface": "시티"
         }
@@ -990,6 +1022,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "부암동",
+          "name_clean": "부암스카이뷰",
           "year": 2004,
           "surface": "뷰"
         },
@@ -999,6 +1032,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "초량동",
+          "name_clean": "반도보라스카이뷰",
           "year": 2006,
           "surface": "뷰"
         },
@@ -1008,6 +1042,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "시티뷰",
           "year": 2017,
           "surface": "뷰"
         },
@@ -1017,6 +1052,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "청도스카이뷰",
           "year": 2004,
           "surface": "뷰"
         },
@@ -1026,6 +1062,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "문흥동",
+          "name_clean": "금형트리뷰",
           "year": 2006,
           "surface": "뷰"
         },
@@ -1035,6 +1072,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "대동",
+          "name_clean": "대동펜타뷰",
           "year": 2011,
           "surface": "뷰"
         }
@@ -1167,6 +1205,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "충무로4가",
+          "name_clean": "남산센트럴자이",
           "year": 2009,
           "surface": "센트럴"
         },
@@ -1176,6 +1215,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "부전동",
+          "name_clean": "더샵센트럴스타",
           "year": 2011,
           "surface": "센트럴"
         },
@@ -1185,6 +1225,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "청라센트럴파크",
           "year": 2008,
           "surface": "센트럴"
         },
@@ -1194,6 +1235,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "운남동",
+          "name_clean": "영종센트럴푸르지오자이",
           "year": 2019,
           "surface": "센트럴"
         },
@@ -1203,6 +1245,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "계림동",
+          "name_clean": "그랜드센트럴",
           "year": 2020,
           "surface": "센트럴"
         },
@@ -1212,6 +1255,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "문화동",
+          "name_clean": "센트럴파크",
           "year": 2007,
           "surface": "센트럴"
         }
@@ -1344,6 +1388,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "내수동",
+          "name_clean": "경희궁파크팰리스",
           "year": 2003,
           "surface": "팰리스"
         },
@@ -1353,6 +1398,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동3가",
+          "name_clean": "보수에코팰리스",
           "year": 2020,
           "surface": "팰리스"
         },
@@ -1362,6 +1408,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "부림팰리스",
           "year": 2015,
           "surface": "팰리스"
         },
@@ -1371,6 +1418,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신생동",
+          "name_clean": "비치팰리스",
           "year": 2005,
           "surface": "팰리스"
         },
@@ -1380,6 +1428,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "금호동",
+          "name_clean": "종원팰리스빌",
           "year": 2002,
           "surface": "팰리스"
         },
@@ -1389,6 +1438,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "가양동",
+          "name_clean": "드림팰리스아파트",
           "year": 2015,
           "surface": "팰리스"
         }
@@ -1521,6 +1571,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "효제동",
+          "name_clean": "포레스트힐시티",
           "year": 2017,
           "surface": "힐"
         },
@@ -1530,6 +1581,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동2가",
+          "name_clean": "노블레스힐",
           "year": 1994,
           "surface": "힐"
         },
@@ -1539,6 +1591,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신천동",
+          "name_clean": "벽산e-솔렌스힐",
           "year": 2007,
           "surface": "힐"
         },
@@ -1548,6 +1601,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "운남동",
+          "name_clean": "영종베르힐스카이시티",
           "year": 2024,
           "surface": "힐"
         },
@@ -1557,6 +1611,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "명지로드힐포레",
           "year": 2021,
           "surface": "힐"
         },
@@ -1566,6 +1621,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "성남동",
+          "name_clean": "동부힐스퀘어",
           "year": 2011,
           "surface": "힐"
         }
@@ -1698,6 +1754,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "신당동",
+          "name_clean": "인성아트빌",
           "year": 2001,
           "surface": "아트"
         },
@@ -1707,6 +1764,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동3가",
+          "name_clean": "화인아트빌리지",
           "year": 1993,
           "surface": "아트"
         },
@@ -1716,6 +1774,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "대봉동",
+          "name_clean": "아트빌",
           "year": 2000,
           "surface": "아트"
         },
@@ -1725,6 +1784,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "숭의동",
+          "name_clean": "삼성아트빌",
           "year": 2002,
           "surface": "아트"
         },
@@ -1734,6 +1794,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "쌍촌동",
+          "name_clean": "우미아트빌",
           "year": 2002,
           "surface": "아트"
         },
@@ -1743,6 +1804,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "인동",
+          "name_clean": "구룡아트빌",
           "year": 2005,
           "surface": "아트"
         }
@@ -1871,6 +1933,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "신당동",
+          "name_clean": "대성드림",
           "year": 2002,
           "surface": "드림"
         },
@@ -1880,6 +1943,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "창조드림빌라",
           "year": 2002,
           "surface": "드림"
         },
@@ -1889,6 +1953,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "삼덕동2가",
+          "name_clean": "삼덕드림타운",
           "year": 2003,
           "surface": "드림"
         },
@@ -1898,6 +1963,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "전동",
+          "name_clean": "광백드림빌",
           "year": 2019,
           "surface": "드림"
         },
@@ -1907,6 +1973,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "양산동",
+          "name_clean": "드림플러스",
           "year": 2017,
           "surface": "드림"
         },
@@ -1916,6 +1983,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "가양동",
+          "name_clean": "드림팰리스아파트",
           "year": 2015,
           "surface": "드림"
         }
@@ -2044,6 +2112,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "명륜1가",
+          "name_clean": "리치캐슬아파트",
           "year": 2003,
           "surface": "캐슬"
         },
@@ -2053,6 +2122,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "부평동4가",
+          "name_clean": "로얄스카이캐슬",
           "year": 2020,
           "surface": "캐슬"
         },
@@ -2062,6 +2132,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "이스트캐슬",
           "year": 2001,
           "surface": "캐슬"
         },
@@ -2071,6 +2142,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "숭의동",
+          "name_clean": "시티캐슬",
           "year": 2009,
           "surface": "캐슬"
         },
@@ -2080,6 +2152,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "양산동",
+          "name_clean": "명진캐슬",
           "year": 2013,
           "surface": "캐슬"
         },
@@ -2089,6 +2162,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용전동",
+          "name_clean": "로하스캐슬",
           "year": 2014,
           "surface": "캐슬"
         }
@@ -2221,6 +2295,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "부암동",
+          "name_clean": "부암스카이뷰",
           "year": 2004,
           "surface": "스카이"
         },
@@ -2230,6 +2305,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "부평동4가",
+          "name_clean": "로얄스카이캐슬",
           "year": 2020,
           "surface": "스카이"
         },
@@ -2239,6 +2315,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "허브스카이",
           "year": 2006,
           "surface": "스카이"
         },
@@ -2248,6 +2325,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "내동",
+          "name_clean": "신포스카이타워",
           "year": 1998,
           "surface": "스카이"
         },
@@ -2257,6 +2335,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "백운동",
+          "name_clean": "대흥사직스카이",
           "year": 1991,
           "surface": "스카이"
         },
@@ -2266,6 +2345,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "인동",
+          "name_clean": "대전스카이자이르네",
           "year": 2025,
           "surface": "스카이"
         }
@@ -2398,6 +2478,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "중구리버빌",
           "year": 2003,
           "surface": "리버"
         },
@@ -2407,6 +2488,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "수안동",
+          "name_clean": "삼진리버뷰(한전)",
           "year": 1979,
           "surface": "리버"
         },
@@ -2416,6 +2498,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "검사동",
+          "name_clean": "리버파크",
           "year": 2002,
           "surface": "리버"
         },
@@ -2425,6 +2508,7 @@
           "sido": "인천광역시",
           "sigungu": "연수구",
           "dong": "송도동",
+          "name_clean": "송도센트럴파크리버리치",
           "year": 2023,
           "surface": "리버"
         },
@@ -2434,6 +2518,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "학동",
+          "name_clean": "무등산리버파크",
           "year": 2011,
           "surface": "리버"
         },
@@ -2443,6 +2528,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "대성동",
+          "name_clean": "은어송하늘채리버뷰",
           "year": 2024,
           "surface": "리버"
         }
@@ -2571,6 +2657,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "신영동",
+          "name_clean": "구암하이빌",
           "year": 2002,
           "surface": "하이"
         },
@@ -2580,6 +2667,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "동대신동3가",
+          "name_clean": "브라운스톤하이포레",
           "year": 2020,
           "surface": "하이"
         },
@@ -2589,6 +2677,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "검사동",
+          "name_clean": "금사리하이빌",
           "year": 2003,
           "surface": "하이"
         },
@@ -2598,6 +2687,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "로렌.하이뷰",
           "year": 2015,
           "surface": "하이"
         },
@@ -2607,6 +2697,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "지산동",
+          "name_clean": "진아하이빌",
           "year": 2000,
           "surface": "하이"
         },
@@ -2616,6 +2707,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "봉명동",
+          "name_clean": "하이랜드",
           "year": 2011,
           "surface": "하이"
         }
@@ -2748,6 +2840,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "수송동",
+          "name_clean": "로얄팰리스스위트",
           "year": 2005,
           "surface": "로얄"
         },
@@ -2757,6 +2850,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "로얄플러스빌라",
           "year": 2006,
           "surface": "로얄"
         },
@@ -2766,6 +2860,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "로얄이스트",
           "year": 2003,
           "surface": "로얄"
         },
@@ -2775,6 +2870,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "답동",
+          "name_clean": "답동로얄맨션",
           "year": 2002,
           "surface": "로얄"
         },
@@ -2784,6 +2880,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "동산로얄",
           "year": 1989,
           "surface": "로얄"
         },
@@ -2793,6 +2890,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "가양동",
+          "name_clean": "안전로얄",
           "year": 1987,
           "surface": "로얄"
         }
@@ -2921,6 +3019,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "명륜1가",
+          "name_clean": "리치캐슬아파트",
           "year": 2003,
           "surface": "리치"
         },
@@ -2930,6 +3029,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "남부민동",
+          "name_clean": "수양리치빌",
           "year": 2003,
           "surface": "리치"
         },
@@ -2939,6 +3039,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "동산동",
+          "name_clean": "석우리치타운",
           "year": 2007,
           "surface": "리치"
         },
@@ -2948,6 +3049,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "답동",
+          "name_clean": "월드리치빌",
           "year": 2017,
           "surface": "리치"
         },
@@ -2957,6 +3059,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "대흥동",
+          "name_clean": "대미리치빌",
           "year": 2007,
           "surface": "리치"
         },
@@ -2966,6 +3069,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "대신리치빌",
           "year": 2003,
           "surface": "리치"
         }
@@ -3090,6 +3194,7 @@
           "sido": "서울특별시",
           "sigungu": "중랑구",
           "dong": "묵동",
+          "name_clean": "고덕골든빌",
           "year": 2012,
           "surface": "골든"
         },
@@ -3099,6 +3204,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동2가",
+          "name_clean": "대진골든빌리지",
           "year": 1989,
           "surface": "골든"
         },
@@ -3108,6 +3214,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "청우골든맨션",
           "year": 2002,
           "surface": "골든"
         },
@@ -3117,6 +3224,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "골든스테이트",
           "year": 2019,
           "surface": "골든"
         },
@@ -3126,6 +3234,7 @@
           "sido": "대전광역시",
           "sigungu": "대덕구",
           "dong": "신탄진동",
+          "name_clean": "골든리버",
           "year": 2004,
           "surface": "골든"
         },
@@ -3135,6 +3244,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "복산동",
+          "name_clean": "골든빌리지",
           "year": 1993,
           "surface": "골든"
         }
@@ -3255,6 +3365,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "이촌동",
+          "name_clean": "장미",
           "year": 1975,
           "surface": "장미"
         },
@@ -3264,6 +3375,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "수안동",
+          "name_clean": "장미",
           "year": 1983,
           "surface": "장미"
         },
@@ -3273,6 +3385,7 @@
           "sido": "대구광역시",
           "sigungu": "서구",
           "dong": "평리동",
+          "name_clean": "장미",
           "year": 2001,
           "surface": "장미"
         },
@@ -3282,6 +3395,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "학익동",
+          "name_clean": "장미",
           "year": 1984,
           "surface": "장미"
         },
@@ -3291,6 +3405,7 @@
           "sido": "광주광역시",
           "sigungu": "광산구",
           "dong": "우산동",
+          "name_clean": "장미빌라트",
           "year": 1998,
           "surface": "장미"
         },
@@ -3300,6 +3415,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "유천동",
+          "name_clean": "장미",
           "year": 1981,
           "surface": "장미"
         }
@@ -3428,6 +3544,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "원효로4가",
+          "name_clean": "강변삼성스위트",
           "year": 1999,
           "surface": "강변"
         },
@@ -3437,6 +3554,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "명륜동",
+          "name_clean": "대신강변타워",
           "year": 2000,
           "surface": "강변"
         },
@@ -3446,6 +3564,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신천동",
+          "name_clean": "신천강변",
           "year": 1982,
           "surface": "강변"
         },
@@ -3455,6 +3574,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "사정동",
+          "name_clean": "강변아파트",
           "year": 2016,
           "surface": "강변"
         },
@@ -3464,6 +3584,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "반구동",
+          "name_clean": "한미강변빌리지",
           "year": 2002,
           "surface": "강변"
         },
@@ -3473,6 +3594,7 @@
           "sido": "경기도",
           "sigungu": "남양주시",
           "dong": "진접읍",
+          "name_clean": "대림강변",
           "year": 1992,
           "surface": "강변"
         }
@@ -3589,6 +3711,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "효창동",
+          "name_clean": "용산롯데캐슬센터포레",
           "year": 2019,
           "surface": "포레"
         },
@@ -3598,6 +3721,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "오션포레스타",
           "year": 2015,
           "surface": "포레"
         },
@@ -3607,6 +3731,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "각산동",
+          "name_clean": "대구혁신에듀포레",
           "year": 2013,
           "surface": "포레"
         },
@@ -3616,6 +3741,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시동원로얄듀크마리나포레",
           "year": 2022,
           "surface": "포레"
         },
@@ -3625,6 +3751,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "명지로드힐포레",
           "year": 2021,
           "surface": "포레"
         },
@@ -3634,6 +3761,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용운동",
+          "name_clean": "e편한세상대전에코포레",
           "year": 2020,
           "surface": "포레"
         }
@@ -3762,6 +3890,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "골드캐슬III",
           "year": 2017,
           "surface": "골드"
         },
@@ -3771,6 +3900,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "초량동",
+          "name_clean": "체어빌골드",
           "year": 2003,
           "surface": "골드"
         },
@@ -3780,6 +3910,7 @@
           "sido": "대구광역시",
           "sigungu": "서구",
           "dong": "내당동",
+          "name_clean": "태양골드타운",
           "year": 2001,
           "surface": "골드"
         },
@@ -3789,6 +3920,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "숭의동",
+          "name_clean": "골드프라임",
           "year": 2016,
           "surface": "골드"
         },
@@ -3798,6 +3930,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "치평동",
+          "name_clean": "상무e-다움골드",
           "year": 2014,
           "surface": "골드"
         },
@@ -3807,6 +3940,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "야음동",
+          "name_clean": "롯데캐슬골드",
           "year": 2008,
           "surface": "골드"
         }
@@ -3927,6 +4061,7 @@
           "sido": "서울특별시",
           "sigungu": "성북구",
           "dong": "상월곡동",
+          "name_clean": "동아에코빌",
           "year": 2003,
           "surface": "에코"
         },
@@ -3936,6 +4071,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동3가",
+          "name_clean": "보수에코팰리스",
           "year": 2020,
           "surface": "에코"
         },
@@ -3945,6 +4081,7 @@
           "sido": "대구광역시",
           "sigungu": "달성군",
           "dong": "다사읍",
+          "name_clean": "에코폴리스동화아이위시",
           "year": 2015,
           "surface": "에코"
         },
@@ -3954,6 +4091,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "논현동",
+          "name_clean": "에코메트로",
           "year": 2009,
           "surface": "에코"
         },
@@ -3963,6 +4101,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "주월동",
+          "name_clean": "삼다에코빌",
           "year": 2007,
           "surface": "에코"
         },
@@ -3972,6 +4111,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용운동",
+          "name_clean": "e편한세상대전에코포레",
           "year": 2020,
           "surface": "에코"
         }
@@ -4104,6 +4244,7 @@
           "sido": "서울특별시",
           "sigungu": "금천구",
           "dong": "가산동",
+          "name_clean": "백운한비치(가)",
           "year": 2003,
           "surface": "비치"
         },
@@ -4113,6 +4254,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "남부민동",
+          "name_clean": "대림비치",
           "year": 2003,
           "surface": "비치"
         },
@@ -4122,6 +4264,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신생동",
+          "name_clean": "비치팰리스",
           "year": 2005,
           "surface": "비치"
         },
@@ -4131,6 +4274,7 @@
           "sido": "울산광역시",
           "sigungu": "동구",
           "dong": "방어동",
+          "name_clean": "정우비치",
           "year": 1989,
           "surface": "비치"
         },
@@ -4140,6 +4284,7 @@
           "sido": "전라남도",
           "sigungu": "목포시",
           "dong": "산정동",
+          "name_clean": "신안비치",
           "year": 1991,
           "surface": "비치"
         },
@@ -4149,6 +4294,7 @@
           "sido": "경상북도",
           "sigungu": "포항남구",
           "dong": "송도동",
+          "name_clean": "금성비치타운",
           "year": 1995,
           "surface": "비치"
         }
@@ -4249,6 +4395,7 @@
           "sido": "서울특별시",
           "sigungu": "동대문구",
           "dong": "답십리동",
+          "name_clean": "답십리청솔우성",
           "year": 2000,
           "surface": "청솔"
         },
@@ -4258,6 +4405,7 @@
           "sido": "부산광역시",
           "sigungu": "영도구",
           "dong": "영선동3가",
+          "name_clean": "청솔아트빌라",
           "year": 2002,
           "surface": "청솔"
         },
@@ -4267,6 +4415,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "청솔",
           "year": 2003,
           "surface": "청솔"
         },
@@ -4276,6 +4425,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "구월동",
+          "name_clean": "청솔",
           "year": 2004,
           "surface": "청솔"
         },
@@ -4285,6 +4435,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "일곡동",
+          "name_clean": "청솔",
           "year": 2000,
           "surface": "청솔"
         },
@@ -4294,6 +4445,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "둔산동",
+          "name_clean": "청솔아파트",
           "year": 1991,
           "surface": "청솔"
         }
@@ -4422,6 +4574,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "퍼스트빌",
           "year": 2015,
           "surface": "퍼스트"
         },
@@ -4431,6 +4584,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "범일동",
+          "name_clean": "퍼스트빌",
           "year": 2014,
           "surface": "퍼스트"
         },
@@ -4440,6 +4594,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "봉덕동",
+          "name_clean": "봉덕한라하우젠트퍼스트",
           "year": 2018,
           "surface": "퍼스트"
         },
@@ -4449,6 +4604,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "도경퍼스트타운",
           "year": 2014,
           "surface": "퍼스트"
         },
@@ -4458,6 +4614,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "압촌동",
+          "name_clean": "에너지밸리풍경채퍼스트파크",
           "year": 2022,
           "surface": "퍼스트"
         },
@@ -4467,6 +4624,7 @@
           "sido": "세종특별자치시",
           "sigungu": "세종특별자치시",
           "dong": "한솔동",
+          "name_clean": "첫마을 (퍼스트프라임)",
           "year": 2011,
           "surface": "퍼스트"
         }
@@ -4591,6 +4749,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "수송동",
+          "name_clean": "로얄팰리스스위트",
           "year": 2005,
           "surface": "스위트"
         },
@@ -4600,6 +4759,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동3가",
+          "name_clean": "대윤스위트",
           "year": 2001,
           "surface": "스위트"
         },
@@ -4609,6 +4769,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "지저동",
+          "name_clean": "부민스위트빌아파트",
           "year": 2002,
           "surface": "스위트"
         },
@@ -4618,6 +4779,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "숭의동",
+          "name_clean": "스위트파크",
           "year": 2011,
           "surface": "스위트"
         },
@@ -4627,6 +4789,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "운림동",
+          "name_clean": "무등스위트맨션",
           "year": 1995,
           "surface": "스위트"
         },
@@ -4636,6 +4799,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "탄방동",
+          "name_clean": "리베라스위트빌II",
           "year": 2004,
           "surface": "스위트"
         }
@@ -4756,6 +4920,7 @@
           "sido": "서울특별시",
           "sigungu": "노원구",
           "dong": "중계동",
+          "name_clean": "중계무지개",
           "year": 1991,
           "surface": "무지개"
         },
@@ -4765,6 +4930,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "부암동",
+          "name_clean": "럭키무지개타운",
           "year": 1989,
           "surface": "무지개"
         },
@@ -4774,6 +4940,7 @@
           "sido": "대구광역시",
           "sigungu": "북구",
           "dong": "침산동",
+          "name_clean": "대한동아무지개",
           "year": 1999,
           "surface": "무지개"
         },
@@ -4783,6 +4950,7 @@
           "sido": "인천광역시",
           "sigungu": "연수구",
           "dong": "동춘동",
+          "name_clean": "무지개마을",
           "year": 1995,
           "surface": "무지개"
         },
@@ -4792,6 +4960,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "금호동",
+          "name_clean": "해광대덕무지개",
           "year": 1994,
           "surface": "무지개"
         },
@@ -4801,6 +4970,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "용두동",
+          "name_clean": "한라무지개",
           "year": 1993,
           "surface": "무지개"
         }
@@ -4929,6 +5099,7 @@
           "sido": "서울특별시",
           "sigungu": "동작구",
           "dong": "흑석동",
+          "name_clean": "롯데캐슬에듀포레",
           "year": 2018,
           "surface": "에듀"
         },
@@ -4938,6 +5109,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "초읍동",
+          "name_clean": "초읍월드메르디앙에듀포레",
           "year": 2024,
           "surface": "에듀"
         },
@@ -4947,6 +5119,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "각산동",
+          "name_clean": "대구혁신에듀포레",
           "year": 2013,
           "surface": "에듀"
         },
@@ -4956,6 +5129,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신흥동3가",
+          "name_clean": "인천유림노르웨이숲에듀오션",
           "year": 2023,
           "surface": "에듀"
         },
@@ -4965,6 +5139,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "용산동",
+          "name_clean": "용산지구모아엘가에듀파크",
           "year": 2019,
           "surface": "에듀"
         },
@@ -4974,6 +5149,7 @@
           "sido": "울산광역시",
           "sigungu": "북구",
           "dong": "효문동",
+          "name_clean": "한신더휴에듀포레",
           "year": 2023,
           "surface": "에듀"
         }
@@ -5102,6 +5278,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "신당동",
+          "name_clean": "푸른마을",
           "year": 2000,
           "surface": "푸른"
         },
@@ -5111,6 +5288,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "가야동",
+          "name_clean": "푸른마을",
           "year": 2012,
           "surface": "푸른"
         },
@@ -5120,6 +5298,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신천동",
+          "name_clean": "우방푸른타운",
           "year": 1996,
           "surface": "푸른"
         },
@@ -5129,6 +5308,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부개동",
+          "name_clean": "푸른마을한신,삼부",
           "year": 1999,
           "surface": "푸른"
         },
@@ -5138,6 +5318,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "지산동",
+          "name_clean": "푸른맨션",
           "year": 1983,
           "surface": "푸른"
         },
@@ -5147,6 +5328,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용전동",
+          "name_clean": "푸른",
           "year": 2000,
           "surface": "푸른"
         }
@@ -5271,6 +5453,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "부암동",
+          "name_clean": "프라임캐슬(케이빌라트)",
           "year": 2002,
           "surface": "프라임"
         },
@@ -5280,6 +5463,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "부전동",
+          "name_clean": "성원더프라임아파트",
           "year": 2016,
           "surface": "프라임"
         },
@@ -5289,6 +5473,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "영진프라임",
           "year": 2003,
           "surface": "프라임"
         },
@@ -5298,6 +5483,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "씨티프라임",
           "year": 2010,
           "surface": "프라임"
         },
@@ -5307,6 +5493,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "신안동",
+          "name_clean": "프라임로하스",
           "year": 2015,
           "surface": "프라임"
         },
@@ -5316,6 +5503,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "부사동",
+          "name_clean": "대영프라임",
           "year": 2004,
           "surface": "프라임"
         }
@@ -5444,6 +5632,7 @@
           "sido": "서울특별시",
           "sigungu": "광진구",
           "dong": "자양동",
+          "name_clean": "더샵스타시티",
           "year": 2007,
           "surface": "스타"
         },
@@ -5453,6 +5642,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "부용동1가",
+          "name_clean": "밸리스타",
           "year": 2015,
           "surface": "스타"
         },
@@ -5462,6 +5652,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "주안스타뷰아파트",
           "year": 2015,
           "surface": "스타"
         },
@@ -5471,6 +5662,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "풍향동",
+          "name_clean": "보라스타빌",
           "year": 2003,
           "surface": "스타"
         },
@@ -5480,6 +5672,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "궁동",
+          "name_clean": "스타빌",
           "year": 2011,
           "surface": "스타"
         },
@@ -5489,6 +5682,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "달동",
+          "name_clean": "스타팰리스NO.1",
           "year": 2018,
           "surface": "스타"
         }
@@ -5601,6 +5795,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "그랜드힐오피스텔",
           "year": 2017,
           "surface": "그랜드"
         },
@@ -5610,6 +5805,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "당감동",
+          "name_clean": "금호그랜드타운",
           "year": 2001,
           "surface": "그랜드"
         },
@@ -5619,6 +5815,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "그랜드파크",
           "year": 2002,
           "surface": "그랜드"
         },
@@ -5628,6 +5825,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "그랜드캐슬",
           "year": 2015,
           "surface": "그랜드"
         },
@@ -5637,6 +5835,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "계림동",
+          "name_clean": "그랜드센트럴",
           "year": 2020,
           "surface": "그랜드"
         },
@@ -5646,6 +5845,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "용산동",
+          "name_clean": "호반써밋그랜드파크1BL",
           "year": 2023,
           "surface": "그랜드"
         }
@@ -5774,6 +5974,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "숭인동",
+          "name_clean": "블루빌",
           "year": 2017,
           "surface": "블루"
         },
@@ -5783,6 +5984,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동2가",
+          "name_clean": "오션스카이블루",
           "year": 2014,
           "surface": "블루"
         },
@@ -5792,6 +5994,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "동양블루스카이",
           "year": 2017,
           "surface": "블루"
         },
@@ -5801,6 +6004,7 @@
           "sido": "인천광역시",
           "sigungu": "서구",
           "dong": "청라동",
+          "name_clean": "청라국제금융단지한양수자인레이크블루",
           "year": 2019,
           "surface": "블루"
         },
@@ -5810,6 +6014,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "삼각동",
+          "name_clean": "성풍블루빌",
           "year": 2003,
           "surface": "블루"
         },
@@ -5819,6 +6024,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "선암동",
+          "name_clean": "블루힐",
           "year": 2012,
           "surface": "블루"
         }
@@ -5939,6 +6145,7 @@
           "sido": "서울특별시",
           "sigungu": "동대문구",
           "dong": "장안동",
+          "name_clean": "동대문더퍼스트데시앙",
           "year": 2019,
           "surface": "더퍼스트"
         },
@@ -5948,6 +6155,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "암남동",
+          "name_clean": "e편한세상송도더퍼스트비치",
           "year": 2024,
           "surface": "더퍼스트"
         },
@@ -5957,6 +6165,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "대명동",
+          "name_clean": "힐스테이트대명더퍼스트",
           "year": 2025,
           "surface": "더퍼스트"
         },
@@ -5966,6 +6175,7 @@
           "sido": "인천광역시",
           "sigungu": "연수구",
           "dong": "송도동",
+          "name_clean": "베르디움더퍼스트",
           "year": 2017,
           "surface": "더퍼스트"
         },
@@ -5975,6 +6185,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "월산동",
+          "name_clean": "반도유보라더퍼스트",
           "year": 2022,
           "surface": "더퍼스트"
         },
@@ -5984,6 +6195,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "대사동",
+          "name_clean": "더퍼스트뷰",
           "year": 2021,
           "surface": "더퍼스트"
         }
@@ -6108,6 +6320,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "한남동",
+          "name_clean": "형우베스트빌",
           "year": 2000,
           "surface": "베스트"
         },
@@ -6117,6 +6330,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "초읍동",
+          "name_clean": "협성베스트하우스",
           "year": 1994,
           "surface": "베스트"
         },
@@ -6126,6 +6340,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "부림베스트빌",
           "year": 2001,
           "surface": "베스트"
         },
@@ -6135,6 +6350,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "본촌동",
+          "name_clean": "베스트클래스아파트",
           "year": 2017,
           "surface": "베스트"
         },
@@ -6144,6 +6360,7 @@
           "sido": "대전광역시",
           "sigungu": "대덕구",
           "dong": "덕암동",
+          "name_clean": "신원베스트빌",
           "year": 2004,
           "surface": "베스트"
         },
@@ -6153,6 +6370,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "희재베스트빌",
           "year": 2003,
           "surface": "베스트"
         }
@@ -6269,6 +6487,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "신당동",
+          "name_clean": "초원",
           "year": 1999,
           "surface": "초원"
         },
@@ -6278,6 +6497,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "초원",
           "year": 1976,
           "surface": "초원"
         },
@@ -6287,6 +6507,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "초원(가)",
           "year": 1980,
           "surface": "초원"
         },
@@ -6296,6 +6517,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "양동",
+          "name_clean": "초원파크",
           "year": 1992,
           "surface": "초원"
         },
@@ -6305,6 +6527,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "만년동",
+          "name_clean": "초원",
           "year": 1995,
           "surface": "초원"
         },
@@ -6314,6 +6537,7 @@
           "sido": "울산광역시",
           "sigungu": "울주군",
           "dong": "삼남읍",
+          "name_clean": "초원주택",
           "year": 1989,
           "surface": "초원"
         }
@@ -6430,6 +6654,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "오션타워",
           "year": 2011,
           "surface": "오션"
         },
@@ -6439,6 +6664,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신흥동3가",
+          "name_clean": "인천유림노르웨이숲에듀오션",
           "year": 2023,
           "surface": "오션"
         },
@@ -6448,6 +6674,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "야음동",
+          "name_clean": "오션빌라",
           "year": 2004,
           "surface": "오션"
         },
@@ -6457,6 +6684,7 @@
           "sido": "경기도",
           "sigungu": "수원팔달구",
           "dong": "매교동",
+          "name_clean": "블루오션",
           "year": 2017,
           "surface": "오션"
         },
@@ -6466,6 +6694,7 @@
           "sido": "전라남도",
           "sigungu": "목포시",
           "dong": "옥암동",
+          "name_clean": "우미오션빌",
           "year": 2002,
           "surface": "오션"
         },
@@ -6475,6 +6704,7 @@
           "sido": "경상북도",
           "sigungu": "포항남구",
           "dong": "송도동",
+          "name_clean": "태왕아너스오션",
           "year": 2006,
           "surface": "오션"
         }
@@ -6579,6 +6809,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "아미동2가",
+          "name_clean": "아미전원빌라",
           "year": 1998,
           "surface": "전원"
         },
@@ -6588,6 +6819,7 @@
           "sido": "대구광역시",
           "sigungu": "서구",
           "dong": "내당동",
+          "name_clean": "전원",
           "year": 1981,
           "surface": "전원"
         },
@@ -6597,6 +6829,7 @@
           "sido": "인천광역시",
           "sigungu": "서구",
           "dong": "석남동",
+          "name_clean": "전원",
           "year": 2017,
           "surface": "전원"
         },
@@ -6606,6 +6839,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "월평동",
+          "name_clean": "전원",
           "year": 1994,
           "surface": "전원"
         },
@@ -6615,6 +6849,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "교동",
+          "name_clean": "전원빌라",
           "year": 1987,
           "surface": "전원"
         },
@@ -6624,6 +6859,7 @@
           "sido": "경기도",
           "sigungu": "수원권선구",
           "dong": "세류동",
+          "name_clean": "전원",
           "year": 1989,
           "surface": "전원"
         }
@@ -6736,6 +6972,7 @@
           "sido": "서울특별시",
           "sigungu": "성동구",
           "dong": "성수동1가",
+          "name_clean": "서울숲해오름",
           "year": 2005,
           "surface": "해오름"
         },
@@ -6745,6 +6982,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동2가",
+          "name_clean": "해오름",
           "year": 2004,
           "surface": "해오름"
         },
@@ -6754,6 +6992,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신서동",
+          "name_clean": "동화해오름타운",
           "year": 2003,
           "surface": "해오름"
         },
@@ -6763,6 +7002,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "신정동",
+          "name_clean": "해오름",
           "year": 2007,
           "surface": "해오름"
         },
@@ -6772,6 +7012,7 @@
           "sido": "경기도",
           "sigungu": "수원권선구",
           "dong": "탑동",
+          "name_clean": "해오름",
           "year": 2010,
           "surface": "해오름"
         },
@@ -6781,6 +7022,7 @@
           "sido": "충청북도",
           "sigungu": "진천군",
           "dong": "진천읍",
+          "name_clean": "해오름",
           "year": 2004,
           "surface": "해오름"
         }
@@ -6889,6 +7131,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "명륜3가",
+          "name_clean": "한빛",
           "year": 1999,
           "surface": "한빛"
         },
@@ -6898,6 +7141,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동3가",
+          "name_clean": "남성한빛가든",
           "year": 1996,
           "surface": "한빛"
         },
@@ -6907,6 +7151,7 @@
           "sido": "대구광역시",
           "sigungu": "달서구",
           "dong": "이곡동",
+          "name_clean": "한빛마을(성서주공)",
           "year": 1998,
           "surface": "한빛"
         },
@@ -6916,6 +7161,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "숭의동",
+          "name_clean": "한빛아파트",
           "year": 2002,
           "surface": "한빛"
         },
@@ -6925,6 +7171,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "어은동",
+          "name_clean": "한빛",
           "year": 1992,
           "surface": "한빛"
         },
@@ -6934,6 +7181,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "달동",
+          "name_clean": "한빛파크",
           "year": 2004,
           "surface": "한빛"
         }
@@ -7050,6 +7298,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "청파동1가",
+          "name_clean": "목화",
           "year": 2004,
           "surface": "목화"
         },
@@ -7059,6 +7308,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "동대신동1가",
+          "name_clean": "진흥목화",
           "year": 1998,
           "surface": "목화"
         },
@@ -7068,6 +7318,7 @@
           "sido": "대구광역시",
           "sigungu": "북구",
           "dong": "읍내동",
+          "name_clean": "삼진목화",
           "year": 1991,
           "surface": "목화"
         },
@@ -7077,6 +7328,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "간석동",
+          "name_clean": "삼익목화",
           "year": 1985,
           "surface": "목화"
         },
@@ -7086,6 +7338,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "우산동",
+          "name_clean": "목화맨션",
           "year": 1983,
           "surface": "목화"
         },
@@ -7095,6 +7348,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "복수동",
+          "name_clean": "삼익목화",
           "year": 1993,
           "surface": "목화"
         }
@@ -7219,6 +7473,7 @@
           "sido": "서울특별시",
           "sigungu": "강북구",
           "dong": "수유동",
+          "name_clean": "궁전",
           "year": 2003,
           "surface": "궁전"
         },
@@ -7228,6 +7483,7 @@
           "sido": "부산광역시",
           "sigungu": "영도구",
           "dong": "영선동4가",
+          "name_clean": "궁전골드타운",
           "year": 2002,
           "surface": "궁전"
         },
@@ -7237,6 +7493,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "대명동",
+          "name_clean": "궁전하이츠",
           "year": 2002,
           "surface": "궁전"
         },
@@ -7246,6 +7503,7 @@
           "sido": "인천광역시",
           "sigungu": "서구",
           "dong": "석남동",
+          "name_clean": "궁전",
           "year": 2003,
           "surface": "궁전"
         },
@@ -7255,6 +7513,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "유천동",
+          "name_clean": "궁전아파트",
           "year": 1983,
           "surface": "궁전"
         },
@@ -7264,6 +7523,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "태화동",
+          "name_clean": "한라궁전맨션",
           "year": 1989,
           "surface": "궁전"
         }
@@ -7380,6 +7640,7 @@
           "sido": "서울특별시",
           "sigungu": "송파구",
           "dong": "송파동",
+          "name_clean": "경남레이크파크",
           "year": 1999,
           "surface": "레이크"
         },
@@ -7389,6 +7650,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "레이크힐",
           "year": 2015,
           "surface": "레이크"
         },
@@ -7398,6 +7660,7 @@
           "sido": "인천광역시",
           "sigungu": "서구",
           "dong": "청라동",
+          "name_clean": "청라더샵레이크파크",
           "year": 2013,
           "surface": "레이크"
         },
@@ -7407,6 +7670,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "노대동",
+          "name_clean": "송화레이크힐",
           "year": 2007,
           "surface": "레이크"
         },
@@ -7416,6 +7680,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "도안동",
+          "name_clean": "트리풀시티레이크포레",
           "year": 2021,
           "surface": "레이크"
         },
@@ -7425,6 +7690,7 @@
           "sido": "울산광역시",
           "sigungu": "북구",
           "dong": "송정동",
+          "name_clean": "울산송정제일풍경채레이크뷰",
           "year": 2019,
           "surface": "레이크"
         }
@@ -7545,6 +7811,7 @@
           "sido": "서울특별시",
           "sigungu": "동대문구",
           "dong": "휘경동",
+          "name_clean": "서울가든",
           "year": 1985,
           "surface": "가든"
         },
@@ -7554,6 +7821,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동3가",
+          "name_clean": "남성한빛가든",
           "year": 1996,
           "surface": "가든"
         },
@@ -7563,6 +7831,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "대명동",
+          "name_clean": "대명가든맨션",
           "year": 1983,
           "surface": "가든"
         },
@@ -7572,6 +7841,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "주월동",
+          "name_clean": "라인가든",
           "year": 1985,
           "surface": "가든"
         },
@@ -7581,6 +7851,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "산성동",
+          "name_clean": "한밭가든",
           "year": 1991,
           "surface": "가든"
         },
@@ -7590,6 +7861,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "남외동",
+          "name_clean": "팰리스가든",
           "year": 2023,
           "surface": "가든"
         }
@@ -7698,6 +7970,7 @@
           "sido": "서울특별시",
           "sigungu": "중랑구",
           "dong": "면목동",
+          "name_clean": "아람플러스",
           "year": 2009,
           "surface": "플러스"
         },
@@ -7707,6 +7980,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "세광플러스빌",
           "year": 2002,
           "surface": "플러스"
         },
@@ -7716,6 +7990,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신암동",
+          "name_clean": "삼성플러스빌",
           "year": 2002,
           "surface": "플러스"
         },
@@ -7725,6 +8000,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "플러스",
           "year": 2009,
           "surface": "플러스"
         },
@@ -7734,6 +8010,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "양산동",
+          "name_clean": "드림플러스",
           "year": 2017,
           "surface": "플러스"
         },
@@ -7743,6 +8020,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "둔산동",
+          "name_clean": "둔산플러스",
           "year": 2011,
           "surface": "플러스"
         }
@@ -7859,6 +8137,7 @@
           "sido": "서울특별시",
           "sigungu": "은평구",
           "dong": "불광동",
+          "name_clean": "극동메트로타워",
           "year": 2001,
           "surface": "메트로"
         },
@@ -7868,6 +8147,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동2가",
+          "name_clean": "대신메트로빌",
           "year": 2011,
           "surface": "메트로"
         },
@@ -7877,6 +8157,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "태왕메트로시티",
           "year": 2003,
           "surface": "메트로"
         },
@@ -7886,6 +8167,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "논현동",
+          "name_clean": "에코메트로",
           "year": 2009,
           "surface": "메트로"
         },
@@ -7895,6 +8177,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "메트로힐",
           "year": 2007,
           "surface": "메트로"
         },
@@ -7904,6 +8187,7 @@
           "sido": "경기도",
           "sigungu": "의정부시",
           "dong": "의정부동",
+          "name_clean": "메트로타워",
           "year": 2018,
           "surface": "메트로"
         }
@@ -8008,6 +8292,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "효제동",
+          "name_clean": "포레스트힐시티",
           "year": 2017,
           "surface": "포레스트"
         },
@@ -8017,6 +8302,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "아미동2가",
+          "name_clean": "경동포레스트힐행복주택아미",
           "year": 2023,
           "surface": "포레스트"
         },
@@ -8026,6 +8312,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "대봉동",
+          "name_clean": "대봉서한포레스트",
           "year": 2022,
           "surface": "포레스트"
         },
@@ -8035,6 +8322,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "부평센트럴포레스트",
           "year": 2012,
           "surface": "포레스트"
         },
@@ -8044,6 +8332,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "각화동",
+          "name_clean": "더샵광주포레스트",
           "year": 2023,
           "surface": "포레스트"
         },
@@ -8053,6 +8342,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "판암동",
+          "name_clean": "삼정그린코아포레스트",
           "year": 2018,
           "surface": "포레스트"
         }
@@ -8169,6 +8459,7 @@
           "sido": "서울특별시",
           "sigungu": "노원구",
           "dong": "중계동",
+          "name_clean": "목련",
           "year": 1991,
           "surface": "목련"
         },
@@ -8178,6 +8469,7 @@
           "sido": "부산광역시",
           "sigungu": "남구",
           "dong": "용호동",
+          "name_clean": "목련",
           "year": 1985,
           "surface": "목련"
         },
@@ -8187,6 +8479,7 @@
           "sido": "대구광역시",
           "sigungu": "북구",
           "dong": "읍내동",
+          "name_clean": "칠곡목련",
           "year": 1987,
           "surface": "목련"
         },
@@ -8196,6 +8489,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "둔산동",
+          "name_clean": "목련",
           "year": 1993,
           "surface": "목련"
         },
@@ -8205,6 +8499,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "신정동",
+          "name_clean": "목련",
           "year": 1982,
           "surface": "목련"
         },
@@ -8214,6 +8509,7 @@
           "sido": "경기도",
           "sigungu": "성남분당구",
           "dong": "야탑동",
+          "name_clean": "목련마을(영남)",
           "year": 1995,
           "surface": "목련"
         }
@@ -8330,6 +8626,7 @@
           "sido": "서울특별시",
           "sigungu": "성동구",
           "dong": "마장동",
+          "name_clean": "행복드림",
           "year": 2005,
           "surface": "행복"
         },
@@ -8339,6 +8636,7 @@
           "sido": "부산광역시",
           "sigungu": "수영구",
           "dong": "민락동",
+          "name_clean": "행복타운",
           "year": 2004,
           "surface": "행복"
         },
@@ -8348,6 +8646,7 @@
           "sido": "대구광역시",
           "sigungu": "달서구",
           "dong": "본동",
+          "name_clean": "행복시티",
           "year": 2013,
           "surface": "행복"
         },
@@ -8357,6 +8656,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "행복마을APT",
           "year": 2007,
           "surface": "행복"
         },
@@ -8366,6 +8666,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "도안동",
+          "name_clean": "대전도안엘에이치천년나무행복",
           "year": 2017,
           "surface": "행복"
         },
@@ -8375,6 +8676,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "교동",
+          "name_clean": "청일행복마을",
           "year": 2002,
           "surface": "행복"
         }
@@ -8499,6 +8801,7 @@
           "sido": "서울특별시",
           "sigungu": "은평구",
           "dong": "역촌동",
+          "name_clean": "무궁화",
           "year": 1972,
           "surface": "무궁화"
         },
@@ -8508,6 +8811,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "무궁화",
           "year": 2000,
           "surface": "무궁화"
         },
@@ -8517,6 +8821,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "방촌동",
+          "name_clean": "무궁화",
           "year": 1988,
           "surface": "무궁화"
         },
@@ -8526,6 +8831,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "두암동",
+          "name_clean": "무궁화",
           "year": 1982,
           "surface": "무궁화"
         },
@@ -8535,6 +8841,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "자양동",
+          "name_clean": "무궁화",
           "year": 1985,
           "surface": "무궁화"
         },
@@ -8544,6 +8851,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "반구동",
+          "name_clean": "무궁화",
           "year": 1984,
           "surface": "무궁화"
         }
@@ -8664,6 +8972,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "원효로4가",
+          "name_clean": "산호",
           "year": 1977,
           "surface": "산호"
         },
@@ -8673,6 +8982,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "양정동",
+          "name_clean": "산호맨션",
           "year": 1985,
           "surface": "산호"
         },
@@ -8682,6 +8992,7 @@
           "sido": "대구광역시",
           "sigungu": "북구",
           "dong": "읍내동",
+          "name_clean": "산호한양",
           "year": 1993,
           "surface": "산호"
         },
@@ -8691,6 +9002,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "만수동",
+          "name_clean": "산호",
           "year": 2004,
           "surface": "산호"
         },
@@ -8700,6 +9012,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "두암동",
+          "name_clean": "산호",
           "year": 1983,
           "surface": "산호"
         },
@@ -8709,6 +9022,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "탄방동",
+          "name_clean": "산호",
           "year": 1996,
           "surface": "산호"
         }
@@ -8825,6 +9139,7 @@
           "sido": "서울특별시",
           "sigungu": "도봉구",
           "dong": "쌍문동",
+          "name_clean": "백조",
           "year": 1981,
           "surface": "백조"
         },
@@ -8834,6 +9149,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "암남동",
+          "name_clean": "백조맨션",
           "year": 1984,
           "surface": "백조"
         },
@@ -8843,6 +9159,7 @@
           "sido": "대구광역시",
           "sigungu": "달성군",
           "dong": "현풍읍",
+          "name_clean": "백조맨션",
           "year": 1995,
           "surface": "백조"
         },
@@ -8852,6 +9169,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부개동",
+          "name_clean": "백조(마)",
           "year": 1983,
           "surface": "백조"
         },
@@ -8861,6 +9179,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "소태동",
+          "name_clean": "백조맨션",
           "year": 1983,
           "surface": "백조"
         },
@@ -8870,6 +9189,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "우정동",
+          "name_clean": "백조",
           "year": 1984,
           "surface": "백조"
         }
@@ -8990,6 +9310,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "평창동",
+          "name_clean": "노블레스빌",
           "year": 2002,
           "surface": "노블레스"
         },
@@ -8999,6 +9320,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "보수동2가",
+          "name_clean": "노블레스힐",
           "year": 1994,
           "surface": "노블레스"
         },
@@ -9008,6 +9330,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "간석동",
+          "name_clean": "더웰노블레스",
           "year": 2020,
           "surface": "노블레스"
         },
@@ -9017,6 +9340,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "노은동",
+          "name_clean": "노은노블레스",
           "year": 2004,
           "surface": "노블레스"
         },
@@ -9026,6 +9350,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "노블레스빌",
           "year": 2005,
           "surface": "노블레스"
         },
@@ -9035,6 +9360,7 @@
           "sido": "경기도",
           "sigungu": "수원장안구",
           "dong": "정자동",
+          "name_clean": "노블레스",
           "year": 2003,
           "surface": "노블레스"
         }
@@ -9147,6 +9473,7 @@
           "sido": "서울특별시",
           "sigungu": "중랑구",
           "dong": "망우동",
+          "name_clean": "개나리",
           "year": 1988,
           "surface": "개나리"
         },
@@ -9156,6 +9483,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "명장동",
+          "name_clean": "개나리",
           "year": 1989,
           "surface": "개나리"
         },
@@ -9165,6 +9493,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "대명동",
+          "name_clean": "개나리맨션",
           "year": 1980,
           "surface": "개나리"
         },
@@ -9174,6 +9503,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "대일개나리",
           "year": 1984,
           "surface": "개나리"
         },
@@ -9183,6 +9513,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "내방동",
+          "name_clean": "개나리",
           "year": 1982,
           "surface": "개나리"
         },
@@ -9192,6 +9523,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "대동",
+          "name_clean": "개나리",
           "year": 1995,
           "surface": "개나리"
         }
@@ -9316,6 +9648,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "충무로5가",
+          "name_clean": "충무로헤센스마트",
           "year": 2018,
           "surface": "스마트"
         },
@@ -9325,6 +9658,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "좌천동",
+          "name_clean": "린다스마트포레",
           "year": 2018,
           "surface": "스마트"
         },
@@ -9334,6 +9668,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "스마트빌",
           "year": 2013,
           "surface": "스마트"
         },
@@ -9343,6 +9678,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "성남동",
+          "name_clean": "스마트뷰",
           "year": 2011,
           "surface": "스마트"
         },
@@ -9352,6 +9688,7 @@
           "sido": "경기도",
           "sigungu": "의정부시",
           "dong": "의정부동",
+          "name_clean": "월드메르디앙스마트시티",
           "year": 2023,
           "surface": "스마트"
         },
@@ -9361,6 +9698,7 @@
           "sido": "충청남도",
           "sigungu": "서산시",
           "dong": "석림동",
+          "name_clean": "스마트",
           "year": 2012,
           "surface": "스마트"
         }
@@ -9465,6 +9803,7 @@
           "sido": "서울특별시",
           "sigungu": "강북구",
           "dong": "수유동",
+          "name_clean": "정원",
           "year": 2006,
           "surface": "정원"
         },
@@ -9474,6 +9813,7 @@
           "sido": "부산광역시",
           "sigungu": "남구",
           "dong": "감만동",
+          "name_clean": "정원",
           "year": 1984,
           "surface": "정원"
         },
@@ -9483,6 +9823,7 @@
           "sido": "대구광역시",
           "sigungu": "달서구",
           "dong": "두류동",
+          "name_clean": "하늘정원",
           "year": 2012,
           "surface": "정원"
         },
@@ -9492,6 +9833,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "십정동",
+          "name_clean": "정원",
           "year": 1987,
           "surface": "정원"
         },
@@ -9501,6 +9843,7 @@
           "sido": "광주광역시",
           "sigungu": "광산구",
           "dong": "신창동",
+          "name_clean": "정원씨티캐슬",
           "year": 2013,
           "surface": "정원"
         },
@@ -9510,6 +9853,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용운동",
+          "name_clean": "정원",
           "year": 1997,
           "surface": "정원"
         }
@@ -9626,6 +9970,7 @@
           "sido": "서울특별시",
           "sigungu": "서대문구",
           "dong": "연희동",
+          "name_clean": "은하",
           "year": 1971,
           "surface": "은하"
         },
@@ -9635,6 +9980,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "은하아파트",
           "year": 1976,
           "surface": "은하"
         },
@@ -9644,6 +9990,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "용계동",
+          "name_clean": "은하",
           "year": 1990,
           "surface": "은하"
         },
@@ -9653,6 +10000,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "간석동",
+          "name_clean": "은하",
           "year": 1985,
           "surface": "은하"
         },
@@ -9662,6 +10010,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "우산동",
+          "name_clean": "은하",
           "year": 1983,
           "surface": "은하"
         },
@@ -9671,6 +10020,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "신정동",
+          "name_clean": "은하",
           "year": 1979,
           "surface": "은하"
         }
@@ -9791,6 +10141,7 @@
           "sido": "서울특별시",
           "sigungu": "동대문구",
           "dong": "전농동",
+          "name_clean": "래미안아름숲",
           "year": 2012,
           "surface": "숲"
         },
@@ -9800,6 +10151,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "개금동",
+          "name_clean": "GK하늘숲",
           "year": 2015,
           "surface": "숲"
         },
@@ -9809,6 +10161,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "율하동",
+          "name_clean": "대구율하율하숲",
           "year": 2018,
           "surface": "숲"
         },
@@ -9818,6 +10171,7 @@
           "sido": "대전광역시",
           "sigungu": "유성구",
           "dong": "지족동",
+          "name_clean": "노은해랑숲마을",
           "year": 2014,
           "surface": "숲"
         },
@@ -9827,6 +10181,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "대동대숲아파트",
           "year": 2008,
           "surface": "숲"
         },
@@ -9836,6 +10191,7 @@
           "sido": "경기도",
           "sigungu": "수원영통구",
           "dong": "원천동",
+          "name_clean": "영흥숲푸르지오파크비엔",
           "year": 2023,
           "surface": "숲"
         }
@@ -9952,6 +10308,7 @@
           "sido": "서울특별시",
           "sigungu": "성북구",
           "dong": "종암동",
+          "name_clean": "황지클래스",
           "year": 2006,
           "surface": "클래스"
         },
@@ -9961,6 +10318,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "가야동",
+          "name_clean": "퍼스트클래스",
           "year": 2017,
           "surface": "클래스"
         },
@@ -9970,6 +10328,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "신서동",
+          "name_clean": "더뉴클래스",
           "year": 2012,
           "surface": "클래스"
         },
@@ -9979,6 +10338,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "구월동",
+          "name_clean": "퍼스트클래스",
           "year": 2015,
           "surface": "클래스"
         },
@@ -9988,6 +10348,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "금남로5가",
+          "name_clean": "AM-City하이클래스",
           "year": 2014,
           "surface": "클래스"
         },
@@ -9997,6 +10358,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "옥동",
+          "name_clean": "하이클래스빌",
           "year": 2005,
           "surface": "클래스"
         }
@@ -10109,6 +10471,7 @@
           "sido": "서울특별시",
           "sigungu": "노원구",
           "dong": "공릉동",
+          "name_clean": "하늘공원",
           "year": 2006,
           "surface": "하늘"
         },
@@ -10118,6 +10481,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "개금동",
+          "name_clean": "GK하늘숲",
           "year": 2015,
           "surface": "하늘"
         },
@@ -10127,6 +10491,7 @@
           "sido": "대구광역시",
           "sigungu": "달서구",
           "dong": "두류동",
+          "name_clean": "하늘정원",
           "year": 2012,
           "surface": "하늘"
         },
@@ -10136,6 +10501,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "하늘도시우미린",
           "year": 2012,
           "surface": "하늘"
         },
@@ -10145,6 +10511,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "진월동",
+          "name_clean": "금광하늘연가",
           "year": 2005,
           "surface": "하늘"
         },
@@ -10154,6 +10521,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "중촌동",
+          "name_clean": "하늘아파트",
           "year": 1998,
           "surface": "하늘"
         }
@@ -10262,6 +10630,7 @@
           "sido": "서울특별시",
           "sigungu": "양천구",
           "dong": "신정동",
+          "name_clean": "신정숲속마을",
           "year": 2016,
           "surface": "숲속"
         },
@@ -10271,6 +10640,7 @@
           "sido": "부산광역시",
           "sigungu": "북구",
           "dong": "화명동",
+          "name_clean": "그린숲속아파트",
           "year": 1996,
           "surface": "숲속"
         },
@@ -10280,6 +10650,7 @@
           "sido": "경기도",
           "sigungu": "안산상록구",
           "dong": "사동",
+          "name_clean": "숲속마을",
           "year": 1999,
           "surface": "숲속"
         },
@@ -10289,6 +10660,7 @@
           "sido": "경상남도",
           "sigungu": "창원마산회원구",
           "dong": "내서읍",
+          "name_clean": "숲속마을",
           "year": 2001,
           "surface": "숲속"
         },
@@ -10298,6 +10670,7 @@
           "sido": "서울특별시",
           "sigungu": "강서구",
           "dong": "내발산동",
+          "name_clean": "청솔숲속마을",
           "year": 2006,
           "surface": "숲속"
         },
@@ -10307,6 +10680,7 @@
           "sido": "서울특별시",
           "sigungu": "강서구",
           "dong": "내발산동",
+          "name_clean": "청솔숲속마을",
           "year": 2007,
           "surface": "숲속"
         }
@@ -10387,6 +10761,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "전포동",
+          "name_clean": "프리미엄안단테",
           "year": 2015,
           "surface": "프리미엄"
         },
@@ -10396,6 +10771,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "프리미엄팰리스",
           "year": 2019,
           "surface": "프리미엄"
         },
@@ -10405,6 +10781,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "신정동",
+          "name_clean": "렉스프리미엄",
           "year": 2013,
           "surface": "프리미엄"
         },
@@ -10414,6 +10791,7 @@
           "sido": "경기도",
           "sigungu": "성남중원구",
           "dong": "금광동",
+          "name_clean": "중앙하이츠금광프리미엄아파트",
           "year": 2023,
           "surface": "프리미엄"
         },
@@ -10423,6 +10801,7 @@
           "sido": "충청북도",
           "sigungu": "보은군",
           "dong": "보은읍",
+          "name_clean": "프리미엄/뷰",
           "year": 2016,
           "surface": "프리미엄"
         },
@@ -10432,6 +10811,7 @@
           "sido": "전라남도",
           "sigungu": "광양시",
           "dong": "옥곡면",
+          "name_clean": "광양의봄프리미엄",
           "year": 2021,
           "surface": "프리미엄"
         }
@@ -10532,6 +10912,7 @@
           "sido": "서울특별시",
           "sigungu": "중랑구",
           "dong": "중화동",
+          "name_clean": "동구햇살아파트",
           "year": 2001,
           "surface": "햇살"
         },
@@ -10541,6 +10922,7 @@
           "sido": "부산광역시",
           "sigungu": "남구",
           "dong": "대연동",
+          "name_clean": "아침햇살",
           "year": 2005,
           "surface": "햇살"
         },
@@ -10550,6 +10932,7 @@
           "sido": "대구광역시",
           "sigungu": "서구",
           "dong": "비산동",
+          "name_clean": "햇살뷰",
           "year": 2008,
           "surface": "햇살"
         },
@@ -10559,6 +10942,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "문화동",
+          "name_clean": "햇살",
           "year": 2000,
           "surface": "햇살"
         },
@@ -10568,6 +10952,7 @@
           "sido": "경기도",
           "sigungu": "안양만안구",
           "dong": "석수동",
+          "name_clean": "고은햇살",
           "year": 2003,
           "surface": "햇살"
         },
@@ -10577,6 +10962,7 @@
           "sido": "전라남도",
           "sigungu": "목포시",
           "dong": "대안동",
+          "name_clean": "햇살마을",
           "year": 2017,
           "surface": "햇살"
         }
@@ -10673,6 +11059,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "검사동",
+          "name_clean": "별빛누리타운",
           "year": 2014,
           "surface": "별빛"
         },
@@ -10682,6 +11069,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "만수동",
+          "name_clean": "대성유니드별빛마을",
           "year": 2006,
           "surface": "별빛"
         },
@@ -10691,6 +11079,7 @@
           "sido": "울산광역시",
           "sigungu": "울주군",
           "dong": "온양읍",
+          "name_clean": "별빛타워",
           "year": 2023,
           "surface": "별빛"
         },
@@ -10700,6 +11089,7 @@
           "sido": "경기도",
           "sigungu": "고양덕양구",
           "dong": "화정동",
+          "name_clean": "별빛마을 (건영)",
           "year": 1996,
           "surface": "별빛"
         },
@@ -10709,6 +11099,7 @@
           "sido": "전북특별자치도",
           "sigungu": "고창군",
           "dong": "고수면",
+          "name_clean": "별빛마을",
           "year": 2023,
           "surface": "별빛"
         },
@@ -10718,6 +11109,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "논현동",
+          "name_clean": "별빛마을웰카운티",
           "year": 2008,
           "surface": "별빛"
         }
@@ -10802,6 +11194,7 @@
           "sido": "부산광역시",
           "sigungu": "영도구",
           "dong": "청학동",
+          "name_clean": "일신마리나",
           "year": 1994,
           "surface": "마리나"
         },
@@ -10811,6 +11204,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시동원로얄듀크마리나포레",
           "year": 2022,
           "surface": "마리나"
         },
@@ -10820,6 +11214,7 @@
           "sido": "경상남도",
           "sigungu": "창원의창구",
           "dong": "도계동",
+          "name_clean": "리코마리나빌라",
           "year": 1995,
           "surface": "마리나"
         },
@@ -10829,6 +11224,7 @@
           "sido": "제주특별자치도",
           "sigungu": "제주시",
           "dong": "건입동",
+          "name_clean": "장원마리나",
           "year": 2003,
           "surface": "마리나"
         },
@@ -10838,6 +11234,7 @@
           "sido": "부산광역시",
           "sigungu": "해운대구",
           "dong": "우동",
+          "name_clean": "경남마리나",
           "year": 1996,
           "surface": "마리나"
         },
@@ -10847,6 +11244,7 @@
           "sido": "부산광역시",
           "sigungu": "해운대구",
           "dong": "우동",
+          "name_clean": "경동마리나",
           "year": 1995,
           "surface": "마리나"
         }
@@ -10927,6 +11325,7 @@
           "sido": "서울특별시",
           "sigungu": "마포구",
           "dong": "염리동",
+          "name_clean": "마포프레스티지자이",
           "year": 2021,
           "surface": "프레스티지"
         },
@@ -10936,6 +11335,7 @@
           "sido": "부산광역시",
           "sigungu": "수영구",
           "dong": "남천동",
+          "name_clean": "더샵남천프레스티지",
           "year": 2022,
           "surface": "프레스티지"
         },
@@ -10945,6 +11345,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "화정동",
+          "name_clean": "화정아델리움57프레스티지",
           "year": 2025,
           "surface": "프레스티지"
         },
@@ -10954,6 +11355,7 @@
           "sido": "경기도",
           "sigungu": "부천소사구",
           "dong": "소사본동",
+          "name_clean": "소사역한라비발디프레스티지",
           "year": 2024,
           "surface": "프레스티지"
         },
@@ -10963,6 +11365,7 @@
           "sido": "경상북도",
           "sigungu": "경주시",
           "dong": "황성동",
+          "name_clean": "황성베스티움프레스티지",
           "year": 2024,
           "surface": "프레스티지"
         },
@@ -10972,6 +11375,7 @@
           "sido": "서울특별시",
           "sigungu": "영등포구",
           "dong": "당산동4가",
+          "name_clean": "당산롯데캐슬프레스티지",
           "year": 2017,
           "surface": "프레스티지"
         }
@@ -11056,6 +11460,7 @@
           "sido": "서울특별시",
           "sigungu": "관악구",
           "dong": "봉천동",
+          "name_clean": "해바라기아파트",
           "year": 1978,
           "surface": "해바라기"
         },
@@ -11065,6 +11470,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "초량동",
+          "name_clean": "해바라기빌리지",
           "year": 2002,
           "surface": "해바라기"
         },
@@ -11074,6 +11480,7 @@
           "sido": "경상북도",
           "sigungu": "포항남구",
           "dong": "연일읍",
+          "name_clean": "협성해바라기",
           "year": 1992,
           "surface": "해바라기"
         },
@@ -11083,6 +11490,7 @@
           "sido": "경상남도",
           "sigungu": "창원의창구",
           "dong": "도계동",
+          "name_clean": "한효해바라기",
           "year": 1990,
           "surface": "해바라기"
         },
@@ -11092,6 +11500,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "수안동",
+          "name_clean": "금양해바라기",
           "year": 1979,
           "surface": "해바라기"
         },
@@ -11101,6 +11510,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "수안동",
+          "name_clean": "금양해바라기",
           "year": 1981,
           "surface": "해바라기"
         }
@@ -11181,6 +11591,7 @@
           "sido": "서울특별시",
           "sigungu": "마포구",
           "dong": "망원동",
+          "name_clean": "함성백합",
           "year": 2001,
           "surface": "백합"
         },
@@ -11190,6 +11601,7 @@
           "sido": "인천광역시",
           "sigungu": "계양구",
           "dong": "작전동",
+          "name_clean": "백합",
           "year": 1985,
           "surface": "백합"
         },
@@ -11199,6 +11611,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "월평동",
+          "name_clean": "백합",
           "year": 1993,
           "surface": "백합"
         },
@@ -11208,6 +11621,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "남외동",
+          "name_clean": "백합",
           "year": 1985,
           "surface": "백합"
         },
@@ -11217,6 +11631,7 @@
           "sido": "경기도",
           "sigungu": "평택시",
           "dong": "비전동",
+          "name_clean": "동아백합",
           "year": 1994,
           "surface": "백합"
         },
@@ -11226,6 +11641,7 @@
           "sido": "경상북도",
           "sigungu": "김천시",
           "dong": "부곡동",
+          "name_clean": "한일백합",
           "year": 1995,
           "surface": "백합"
         }
@@ -11346,6 +11762,7 @@
           "sido": "서울특별시",
           "sigungu": "동대문구",
           "dong": "장안동",
+          "name_clean": "동대문더퍼스트데시앙",
           "year": 2019,
           "surface": "더퍼스트"
         },
@@ -11355,6 +11772,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "암남동",
+          "name_clean": "e편한세상송도더퍼스트비치",
           "year": 2024,
           "surface": "더퍼스트"
         },
@@ -11364,6 +11782,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "대명동",
+          "name_clean": "힐스테이트대명더퍼스트",
           "year": 2025,
           "surface": "더퍼스트"
         },
@@ -11373,6 +11792,7 @@
           "sido": "인천광역시",
           "sigungu": "연수구",
           "dong": "송도동",
+          "name_clean": "베르디움더퍼스트",
           "year": 2017,
           "surface": "더퍼스트"
         },
@@ -11382,6 +11802,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "월산동",
+          "name_clean": "반도유보라더퍼스트",
           "year": 2022,
           "surface": "더퍼스트"
         },
@@ -11391,6 +11812,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "대사동",
+          "name_clean": "더퍼스트뷰",
           "year": 2021,
           "surface": "더퍼스트"
         }
@@ -11515,6 +11937,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "퍼스트빌",
           "year": 2015,
           "surface": "퍼스트"
         },
@@ -11524,6 +11947,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "범일동",
+          "name_clean": "퍼스트빌",
           "year": 2014,
           "surface": "퍼스트"
         },
@@ -11533,6 +11957,7 @@
           "sido": "대구광역시",
           "sigungu": "남구",
           "dong": "봉덕동",
+          "name_clean": "봉덕한라하우젠트퍼스트",
           "year": 2018,
           "surface": "퍼스트"
         },
@@ -11542,6 +11967,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "도경퍼스트타운",
           "year": 2014,
           "surface": "퍼스트"
         },
@@ -11551,6 +11977,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "압촌동",
+          "name_clean": "에너지밸리풍경채퍼스트파크",
           "year": 2022,
           "surface": "퍼스트"
         },
@@ -11560,6 +11987,7 @@
           "sido": "세종특별자치시",
           "sigungu": "세종특별자치시",
           "dong": "한솔동",
+          "name_clean": "첫마을 (퍼스트프라임)",
           "year": 2011,
           "surface": "퍼스트"
         }
@@ -11684,6 +12112,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "충무로4가",
+          "name_clean": "남산센트럴자이",
           "year": 2009,
           "surface": "센트럴"
         },
@@ -11693,6 +12122,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "부전동",
+          "name_clean": "더샵센트럴스타",
           "year": 2011,
           "surface": "센트럴"
         },
@@ -11702,6 +12132,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "청라센트럴파크",
           "year": 2008,
           "surface": "센트럴"
         },
@@ -11711,6 +12142,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "운남동",
+          "name_clean": "영종센트럴푸르지오자이",
           "year": 2019,
           "surface": "센트럴"
         },
@@ -11720,6 +12152,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "계림동",
+          "name_clean": "그랜드센트럴",
           "year": 2020,
           "surface": "센트럴"
         },
@@ -11729,6 +12162,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "문화동",
+          "name_clean": "센트럴파크",
           "year": 2007,
           "surface": "센트럴"
         }
@@ -11861,6 +12295,7 @@
           "sido": "서울특별시",
           "sigungu": "중구",
           "dong": "황학동",
+          "name_clean": "중구리버빌",
           "year": 2003,
           "surface": "리버"
         },
@@ -11870,6 +12305,7 @@
           "sido": "부산광역시",
           "sigungu": "동래구",
           "dong": "수안동",
+          "name_clean": "삼진리버뷰(한전)",
           "year": 1979,
           "surface": "리버"
         },
@@ -11879,6 +12315,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "검사동",
+          "name_clean": "리버파크",
           "year": 2002,
           "surface": "리버"
         },
@@ -11888,6 +12325,7 @@
           "sido": "인천광역시",
           "sigungu": "연수구",
           "dong": "송도동",
+          "name_clean": "송도센트럴파크리버리치",
           "year": 2023,
           "surface": "리버"
         },
@@ -11897,6 +12335,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "학동",
+          "name_clean": "무등산리버파크",
           "year": 2011,
           "surface": "리버"
         },
@@ -11906,6 +12345,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "대성동",
+          "name_clean": "은어송하늘채리버뷰",
           "year": 2024,
           "surface": "리버"
         }
@@ -12034,6 +12474,7 @@
           "sido": "서울특별시",
           "sigungu": "송파구",
           "dong": "송파동",
+          "name_clean": "경남레이크파크",
           "year": 1999,
           "surface": "레이크"
         },
@@ -12043,6 +12484,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "레이크힐",
           "year": 2015,
           "surface": "레이크"
         },
@@ -12052,6 +12494,7 @@
           "sido": "인천광역시",
           "sigungu": "서구",
           "dong": "청라동",
+          "name_clean": "청라더샵레이크파크",
           "year": 2013,
           "surface": "레이크"
         },
@@ -12061,6 +12504,7 @@
           "sido": "광주광역시",
           "sigungu": "남구",
           "dong": "노대동",
+          "name_clean": "송화레이크힐",
           "year": 2007,
           "surface": "레이크"
         },
@@ -12070,6 +12514,7 @@
           "sido": "대전광역시",
           "sigungu": "서구",
           "dong": "도안동",
+          "name_clean": "트리풀시티레이크포레",
           "year": 2021,
           "surface": "레이크"
         },
@@ -12079,6 +12524,7 @@
           "sido": "울산광역시",
           "sigungu": "북구",
           "dong": "송정동",
+          "name_clean": "울산송정제일풍경채레이크뷰",
           "year": 2019,
           "surface": "레이크"
         }
@@ -12199,6 +12645,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "오션타워",
           "year": 2011,
           "surface": "오션"
         },
@@ -12208,6 +12655,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신흥동3가",
+          "name_clean": "인천유림노르웨이숲에듀오션",
           "year": 2023,
           "surface": "오션"
         },
@@ -12217,6 +12665,7 @@
           "sido": "울산광역시",
           "sigungu": "남구",
           "dong": "야음동",
+          "name_clean": "오션빌라",
           "year": 2004,
           "surface": "오션"
         },
@@ -12226,6 +12675,7 @@
           "sido": "경기도",
           "sigungu": "수원팔달구",
           "dong": "매교동",
+          "name_clean": "블루오션",
           "year": 2017,
           "surface": "오션"
         },
@@ -12235,6 +12685,7 @@
           "sido": "전라남도",
           "sigungu": "목포시",
           "dong": "옥암동",
+          "name_clean": "우미오션빌",
           "year": 2002,
           "surface": "오션"
         },
@@ -12244,6 +12695,7 @@
           "sido": "경상북도",
           "sigungu": "포항남구",
           "dong": "송도동",
+          "name_clean": "태왕아너스오션",
           "year": 2006,
           "surface": "오션"
         }
@@ -12348,6 +12800,7 @@
           "sido": "부산광역시",
           "sigungu": "영도구",
           "dong": "청학동",
+          "name_clean": "일신마리나",
           "year": 1994,
           "surface": "마리나"
         },
@@ -12357,6 +12810,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시동원로얄듀크마리나포레",
           "year": 2022,
           "surface": "마리나"
         },
@@ -12366,6 +12820,7 @@
           "sido": "경상남도",
           "sigungu": "창원의창구",
           "dong": "도계동",
+          "name_clean": "리코마리나빌라",
           "year": 1995,
           "surface": "마리나"
         },
@@ -12375,6 +12830,7 @@
           "sido": "제주특별자치도",
           "sigungu": "제주시",
           "dong": "건입동",
+          "name_clean": "장원마리나",
           "year": 2003,
           "surface": "마리나"
         },
@@ -12384,6 +12840,7 @@
           "sido": "부산광역시",
           "sigungu": "해운대구",
           "dong": "우동",
+          "name_clean": "경남마리나",
           "year": 1996,
           "surface": "마리나"
         },
@@ -12393,6 +12850,7 @@
           "sido": "부산광역시",
           "sigungu": "해운대구",
           "dong": "우동",
+          "name_clean": "경동마리나",
           "year": 1995,
           "surface": "마리나"
         }
@@ -12473,6 +12931,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "신영동",
+          "name_clean": "대아파크빌",
           "year": 1998,
           "surface": "파크"
         },
@@ -12482,6 +12941,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "영주동",
+          "name_clean": "동남파크",
           "year": 1988,
           "surface": "파크"
         },
@@ -12491,6 +12951,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "청라센트럴파크",
           "year": 2008,
           "surface": "파크"
         },
@@ -12500,6 +12961,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시한신더휴스카이파크",
           "year": 2019,
           "surface": "파크"
         },
@@ -12509,6 +12971,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "동명동",
+          "name_clean": "동명파크맨션",
           "year": 1989,
           "surface": "파크"
         },
@@ -12518,6 +12981,7 @@
           "sido": "대전광역시",
           "sigungu": "중구",
           "dong": "문화동",
+          "name_clean": "센트럴파크",
           "year": 2007,
           "surface": "파크"
         }
@@ -12650,6 +13114,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "부암동",
+          "name_clean": "부암스카이뷰",
           "year": 2004,
           "surface": "뷰"
         },
@@ -12659,6 +13124,7 @@
           "sido": "부산광역시",
           "sigungu": "동구",
           "dong": "초량동",
+          "name_clean": "반도보라스카이뷰",
           "year": 2006,
           "surface": "뷰"
         },
@@ -12668,6 +13134,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "남산동",
+          "name_clean": "시티뷰",
           "year": 2017,
           "surface": "뷰"
         },
@@ -12677,6 +13144,7 @@
           "sido": "인천광역시",
           "sigungu": "미추홀구",
           "dong": "주안동",
+          "name_clean": "청도스카이뷰",
           "year": 2004,
           "surface": "뷰"
         },
@@ -12686,6 +13154,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "문흥동",
+          "name_clean": "금형트리뷰",
           "year": 2006,
           "surface": "뷰"
         },
@@ -12695,6 +13164,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "대동",
+          "name_clean": "대동펜타뷰",
           "year": 2011,
           "surface": "뷰"
         }
@@ -12827,6 +13297,7 @@
           "sido": "서울특별시",
           "sigungu": "용산구",
           "dong": "효창동",
+          "name_clean": "용산롯데캐슬센터포레",
           "year": 2019,
           "surface": "포레"
         },
@@ -12836,6 +13307,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동1가",
+          "name_clean": "오션포레스타",
           "year": 2015,
           "surface": "포레"
         },
@@ -12845,6 +13317,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "각산동",
+          "name_clean": "대구혁신에듀포레",
           "year": 2013,
           "surface": "포레"
         },
@@ -12854,6 +13327,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "영종국제도시동원로얄듀크마리나포레",
           "year": 2022,
           "surface": "포레"
         },
@@ -12863,6 +13337,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "산수동",
+          "name_clean": "명지로드힐포레",
           "year": 2021,
           "surface": "포레"
         },
@@ -12872,6 +13347,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "용운동",
+          "name_clean": "e편한세상대전에코포레",
           "year": 2020,
           "surface": "포레"
         }
@@ -13000,6 +13476,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "효제동",
+          "name_clean": "포레스트힐시티",
           "year": 2017,
           "surface": "포레스트"
         },
@@ -13009,6 +13486,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "아미동2가",
+          "name_clean": "경동포레스트힐행복주택아미",
           "year": 2023,
           "surface": "포레스트"
         },
@@ -13018,6 +13496,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "대봉동",
+          "name_clean": "대봉서한포레스트",
           "year": 2022,
           "surface": "포레스트"
         },
@@ -13027,6 +13506,7 @@
           "sido": "인천광역시",
           "sigungu": "부평구",
           "dong": "부평동",
+          "name_clean": "부평센트럴포레스트",
           "year": 2012,
           "surface": "포레스트"
         },
@@ -13036,6 +13516,7 @@
           "sido": "광주광역시",
           "sigungu": "북구",
           "dong": "각화동",
+          "name_clean": "더샵광주포레스트",
           "year": 2023,
           "surface": "포레스트"
         },
@@ -13045,6 +13526,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "판암동",
+          "name_clean": "삼정그린코아포레스트",
           "year": 2018,
           "surface": "포레스트"
         }
@@ -13161,6 +13643,7 @@
           "sido": "서울특별시",
           "sigungu": "은평구",
           "dong": "불광동",
+          "name_clean": "극동메트로타워",
           "year": 2001,
           "surface": "메트로"
         },
@@ -13170,6 +13653,7 @@
           "sido": "부산광역시",
           "sigungu": "서구",
           "dong": "서대신동2가",
+          "name_clean": "대신메트로빌",
           "year": 2011,
           "surface": "메트로"
         },
@@ -13179,6 +13663,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "효목동",
+          "name_clean": "태왕메트로시티",
           "year": 2003,
           "surface": "메트로"
         },
@@ -13188,6 +13673,7 @@
           "sido": "인천광역시",
           "sigungu": "남동구",
           "dong": "논현동",
+          "name_clean": "에코메트로",
           "year": 2009,
           "surface": "메트로"
         },
@@ -13197,6 +13683,7 @@
           "sido": "울산광역시",
           "sigungu": "중구",
           "dong": "성안동",
+          "name_clean": "메트로힐",
           "year": 2007,
           "surface": "메트로"
         },
@@ -13206,6 +13693,7 @@
           "sido": "경기도",
           "sigungu": "의정부시",
           "dong": "의정부동",
+          "name_clean": "메트로타워",
           "year": 2018,
           "surface": "메트로"
         }
@@ -13310,6 +13798,7 @@
           "sido": "서울특별시",
           "sigungu": "동작구",
           "dong": "흑석동",
+          "name_clean": "롯데캐슬에듀포레",
           "year": 2018,
           "surface": "에듀"
         },
@@ -13319,6 +13808,7 @@
           "sido": "부산광역시",
           "sigungu": "부산진구",
           "dong": "초읍동",
+          "name_clean": "초읍월드메르디앙에듀포레",
           "year": 2024,
           "surface": "에듀"
         },
@@ -13328,6 +13818,7 @@
           "sido": "대구광역시",
           "sigungu": "동구",
           "dong": "각산동",
+          "name_clean": "대구혁신에듀포레",
           "year": 2013,
           "surface": "에듀"
         },
@@ -13337,6 +13828,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "신흥동3가",
+          "name_clean": "인천유림노르웨이숲에듀오션",
           "year": 2023,
           "surface": "에듀"
         },
@@ -13346,6 +13838,7 @@
           "sido": "광주광역시",
           "sigungu": "동구",
           "dong": "용산동",
+          "name_clean": "용산지구모아엘가에듀파크",
           "year": 2019,
           "surface": "에듀"
         },
@@ -13355,6 +13848,7 @@
           "sido": "울산광역시",
           "sigungu": "북구",
           "dong": "효문동",
+          "name_clean": "한신더휴에듀포레",
           "year": 2023,
           "surface": "에듀"
         }
@@ -13483,6 +13977,7 @@
           "sido": "서울특별시",
           "sigungu": "종로구",
           "dong": "인의동",
+          "name_clean": "효성쥬얼리시티",
           "year": 2006,
           "surface": "시티"
         },
@@ -13492,6 +13987,7 @@
           "sido": "부산광역시",
           "sigungu": "중구",
           "dong": "대청동4가",
+          "name_clean": "동호이루마시티",
           "year": 2006,
           "surface": "시티"
         },
@@ -13501,6 +13997,7 @@
           "sido": "대구광역시",
           "sigungu": "중구",
           "dong": "동인동1가",
+          "name_clean": "시티타운",
           "year": 1997,
           "surface": "시티"
         },
@@ -13510,6 +14007,7 @@
           "sido": "인천광역시",
           "sigungu": "중구",
           "dong": "중산동",
+          "name_clean": "스카이시티자이",
           "year": 2018,
           "surface": "시티"
         },
@@ -13519,6 +14017,7 @@
           "sido": "광주광역시",
           "sigungu": "서구",
           "dong": "치평동",
+          "name_clean": "상무지구리채시티",
           "year": 2014,
           "surface": "시티"
         },
@@ -13528,6 +14027,7 @@
           "sido": "대전광역시",
           "sigungu": "동구",
           "dong": "인동",
+          "name_clean": "구룡시티빌",
           "year": 2013,
           "surface": "시티"
         }
@@ -18744,9 +19244,9 @@
       {
         "token": "2차",
         "canonical": "2차",
-        "complex_count": 1551,
-        "occurrence_count": 1552,
-        "share": 0.03343753368545866,
+        "complex_count": 1557,
+        "occurrence_count": 1558,
+        "share": 0.03356688584671769,
         "categories": [
           "number"
         ],
@@ -18810,9 +19310,9 @@
       {
         "token": "2",
         "canonical": "2",
-        "complex_count": 1225,
-        "occurrence_count": 1233,
-        "share": 0.02640939959038482,
+        "complex_count": 1217,
+        "occurrence_count": 1225,
+        "share": 0.026236930042039454,
         "categories": [
           "number"
         ],
@@ -18876,9 +19376,9 @@
       {
         "token": "1",
         "canonical": "1",
-        "complex_count": 1051,
-        "occurrence_count": 1055,
-        "share": 0.02265818691387302,
+        "complex_count": 1047,
+        "occurrence_count": 1051,
+        "share": 0.022571952139700334,
         "categories": [
           "number"
         ],
@@ -18942,9 +19442,9 @@
       {
         "token": "1차",
         "canonical": "1차",
-        "complex_count": 892,
-        "occurrence_count": 892,
-        "share": 0.019230354640508786,
+        "complex_count": 894,
+        "occurrence_count": 894,
+        "share": 0.019273472027595127,
         "categories": [
           "number"
         ],
@@ -19008,9 +19508,9 @@
       {
         "token": "1단지",
         "canonical": "1단지",
-        "complex_count": 810,
-        "occurrence_count": 812,
-        "share": 0.01746254176996874,
+        "complex_count": 811,
+        "occurrence_count": 813,
+        "share": 0.017484100463511912,
         "categories": [
           "number"
         ],
@@ -19074,9 +19574,9 @@
       {
         "token": "2단지",
         "canonical": "2단지",
-        "complex_count": 759,
-        "occurrence_count": 760,
-        "share": 0.016363048399267003,
+        "complex_count": 760,
+        "occurrence_count": 761,
+        "share": 0.016384607092810175,
         "categories": [
           "number"
         ],
@@ -19206,9 +19706,9 @@
       {
         "token": "3",
         "canonical": "3",
-        "complex_count": 537,
-        "occurrence_count": 539,
-        "share": 0.01157701843268298,
+        "complex_count": 534,
+        "occurrence_count": 536,
+        "share": 0.011512342352053466,
         "categories": [
           "number"
         ],
@@ -19470,9 +19970,9 @@
       {
         "token": "4",
         "canonical": "4",
-        "complex_count": 252,
-        "occurrence_count": 253,
-        "share": 0.005432790772879163,
+        "complex_count": 250,
+        "occurrence_count": 251,
+        "share": 0.005389673385792821,
         "categories": [
           "number"
         ],
@@ -19536,9 +20036,9 @@
       {
         "token": "5",
         "canonical": "5",
-        "complex_count": 237,
-        "occurrence_count": 237,
-        "share": 0.005109410369731594,
+        "complex_count": 236,
+        "occurrence_count": 236,
+        "share": 0.005087851676188423,
         "categories": [
           "number"
         ],
@@ -20262,9 +20762,9 @@
       {
         "token": "7",
         "canonical": "7",
-        "complex_count": 132,
-        "occurrence_count": 132,
-        "share": 0.0028457475476986096,
+        "complex_count": 131,
+        "occurrence_count": 131,
+        "share": 0.0028241888541554383,
         "categories": [
           "number"
         ],
@@ -21318,6 +21818,72 @@
         ]
       },
       {
+        "token": "거제",
+        "canonical": "거제",
+        "complex_count": 45,
+        "occurrence_count": 45,
+        "share": 0.0009701412094427077,
+        "categories": [
+          "place"
+        ],
+        "pos_tags": [],
+        "reasons": [
+          "local_address_name_match"
+        ],
+        "examples": [
+          {
+            "id": "reb:26470100005264",
+            "name_raw": "거제아파트",
+            "surface": "거제",
+            "start": 0,
+            "end": 2,
+            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+            "sido": "부산광역시",
+            "approval_year": 1976
+          },
+          {
+            "id": "reb:26470100005284",
+            "name_raw": "거제아시아드삼정그린코아",
+            "surface": "거제",
+            "start": 0,
+            "end": 2,
+            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+            "sido": "부산광역시",
+            "approval_year": 2001
+          },
+          {
+            "id": "reb:26470100005296",
+            "name_raw": "거제1차현대홈타운",
+            "surface": "거제",
+            "start": 0,
+            "end": 2,
+            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+            "sido": "부산광역시",
+            "approval_year": 2001
+          },
+          {
+            "id": "reb:26470100005303",
+            "name_raw": "거제2차현대홈타운",
+            "surface": "거제",
+            "start": 0,
+            "end": 2,
+            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+            "sido": "부산광역시",
+            "approval_year": 2002
+          },
+          {
+            "id": "reb:26470100051765",
+            "name_raw": "거제청구하이츠",
+            "surface": "거제",
+            "start": 0,
+            "end": 2,
+            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+            "sido": "부산광역시",
+            "approval_year": 2003
+          }
+        ]
+      },
+      {
         "token": "다산",
         "canonical": "다산",
         "complex_count": 44,
@@ -21776,72 +22342,6 @@
             "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
             "sido": "경기도",
             "approval_year": 2009
-          }
-        ]
-      },
-      {
-        "token": "거제",
-        "canonical": "거제",
-        "complex_count": 39,
-        "occurrence_count": 39,
-        "share": 0.00084078904818368,
-        "categories": [
-          "place"
-        ],
-        "pos_tags": [],
-        "reasons": [
-          "local_address_name_match"
-        ],
-        "examples": [
-          {
-            "id": "reb:26470100005264",
-            "name_raw": "거제아파트",
-            "surface": "거제",
-            "start": 0,
-            "end": 2,
-            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-            "sido": "부산광역시",
-            "approval_year": 1976
-          },
-          {
-            "id": "reb:26470100005284",
-            "name_raw": "거제아시아드삼정그린코아",
-            "surface": "거제",
-            "start": 0,
-            "end": 2,
-            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-            "sido": "부산광역시",
-            "approval_year": 2001
-          },
-          {
-            "id": "reb:26470100051765",
-            "name_raw": "거제청구하이츠",
-            "surface": "거제",
-            "start": 0,
-            "end": 2,
-            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-            "sido": "부산광역시",
-            "approval_year": 2003
-          },
-          {
-            "id": "reb:26470120071828",
-            "name_raw": "거제유림노르웨이숲",
-            "surface": "거제",
-            "start": 0,
-            "end": 2,
-            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-            "sido": "부산광역시",
-            "approval_year": 2007
-          },
-          {
-            "id": "reb:26470120351090",
-            "name_raw": "거제센텀",
-            "surface": "거제",
-            "start": 0,
-            "end": 2,
-            "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-            "sido": "부산광역시",
-            "approval_year": 2017
           }
         ]
       },
@@ -26842,6 +27342,77 @@
       ]
     },
     {
+      "token": "라인",
+      "canonical": "라인",
+      "complex_count": 60,
+      "occurrence_count": 60,
+      "share": 0.001293521612590277,
+      "categories": [
+        "common_noun_candidate",
+        "proper_name_candidate"
+      ],
+      "pos_tags": [
+        "NNG",
+        "NNP"
+      ],
+      "reasons": [
+        "unreviewed_common_noun",
+        "unreviewed_proper_or_foreign_name"
+      ],
+      "examples": [
+        {
+          "id": "reb:11290120441272",
+          "name_raw": "라인캐슬",
+          "surface": "라인",
+          "start": 0,
+          "end": 2,
+          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+          "sido": "서울특별시",
+          "approval_year": 2022
+        },
+        {
+          "id": "reb:11440100080749",
+          "name_raw": "라인성서",
+          "surface": "라인",
+          "start": 0,
+          "end": 2,
+          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+          "sido": "서울특별시",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11500100001781",
+          "name_raw": "등촌라인(조합)",
+          "surface": "라인",
+          "start": 2,
+          "end": 4,
+          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+          "sido": "서울특별시",
+          "approval_year": 1997
+        },
+        {
+          "id": "reb:11500120286292",
+          "name_raw": "라인씨티",
+          "surface": "라인",
+          "start": 0,
+          "end": 2,
+          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+          "sido": "서울특별시",
+          "approval_year": 2014
+        },
+        {
+          "id": "reb:11500120362134",
+          "name_raw": "청담라인씨티",
+          "surface": "라인",
+          "start": 2,
+          "end": 4,
+          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+          "sido": "서울특별시",
+          "approval_year": 2018
+        }
+      ]
+    },
+    {
       "token": "보성",
       "canonical": "보성",
       "complex_count": 60,
@@ -27315,77 +27886,6 @@
           "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
           "sido": "대구광역시",
           "approval_year": 2009
-        }
-      ]
-    },
-    {
-      "token": "라인",
-      "canonical": "라인",
-      "complex_count": 58,
-      "occurrence_count": 58,
-      "share": 0.0012504042255039344,
-      "categories": [
-        "common_noun_candidate",
-        "proper_name_candidate"
-      ],
-      "pos_tags": [
-        "NNG",
-        "NNP"
-      ],
-      "reasons": [
-        "unreviewed_common_noun",
-        "unreviewed_proper_or_foreign_name"
-      ],
-      "examples": [
-        {
-          "id": "reb:11290120441272",
-          "name_raw": "라인캐슬",
-          "surface": "라인",
-          "start": 0,
-          "end": 2,
-          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-          "sido": "서울특별시",
-          "approval_year": 2022
-        },
-        {
-          "id": "reb:11440100080749",
-          "name_raw": "라인성서",
-          "surface": "라인",
-          "start": 0,
-          "end": 2,
-          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-          "sido": "서울특별시",
-          "approval_year": 2005
-        },
-        {
-          "id": "reb:11500100001781",
-          "name_raw": "등촌라인(조합)",
-          "surface": "라인",
-          "start": 2,
-          "end": 4,
-          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-          "sido": "서울특별시",
-          "approval_year": 1997
-        },
-        {
-          "id": "reb:11500120286292",
-          "name_raw": "라인씨티",
-          "surface": "라인",
-          "start": 0,
-          "end": 2,
-          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-          "sido": "서울특별시",
-          "approval_year": 2014
-        },
-        {
-          "id": "reb:11500120362134",
-          "name_raw": "청담라인씨티",
-          "surface": "라인",
-          "start": 2,
-          "end": 4,
-          "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
-          "sido": "서울특별시",
-          "approval_year": 2018
         }
       ]
     },
