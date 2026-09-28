@@ -1,0 +1,3 @@
+# Optional offline GIS measurement dependencies. Web server needs none.
+shapely==2.1.2
+pyproj==3.7.2

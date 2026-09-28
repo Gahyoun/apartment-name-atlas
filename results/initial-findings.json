@@ -1,0 +1,726 @@
+{
+  "built_at": "2026-09-28T08:43:23.258568+00:00",
+  "dataset": {
+    "name": "한국부동산원 공동주택 단지 식별정보 — 아파트",
+    "status": "real",
+    "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+    "download_url": "https://www.data.go.kr/cmm/cmm/fileDownload.do?atchFileId=FILE_000000007644006&fileDetailSn=1&insertDataPrcus=N",
+    "source_snapshot_date": "2026-08-31",
+    "downloaded_at": "2026-09-28T08:07:50.035399+00:00",
+    "observed_at": "2026-09-28",
+    "record_count": 46385,
+    "coordinate_count": 2361,
+    "year_min": 1961,
+    "year_max": 2025,
+    "coverage_note": "한국부동산원 원자료에서 단지종류=1인 전국 아파트. 현재 공시가격 DB 명칭을 사용승인연도와 비교하며 최초 명명연도는 알 수 없음. 지도 좌표는 서울 공식 자료와 엄격히 연결한 일부 단지만 포함.",
+    "coordinate_coverage_note": "전국 REB 원본에는 좌표가 없음. 서울 OpenAptInfo에서 양쪽 유일 도로명주소·법정동·사용승인일이 모두 일치한 단지에만 좌표 보강. 행정구역 중심점 대체 없음.",
+    "license": "이용허락범위 제한 없음 — 공공데이터포털 표기",
+    "raw_file": "data/raw/reb_complex_basic_20260831.csv",
+    "raw_encoding": "cp949",
+    "raw_bytes": 40085190,
+    "raw_sha256": "87272863d9c2edcd69d1a5319eb5755c288f13e8d0525dafb92c10a54c3cb00d",
+    "name_selection": "단지명_공시가격 → 단지명_건축물대장 → 단지명_도로명주소; first nonempty",
+    "audit": {
+      "source_row_count": 307834,
+      "apartment_row_count": 46385,
+      "accepted_record_count": 46385,
+      "skipped": {
+        "non_apartment": 261449
+      },
+      "exact_duplicate_count": 0,
+      "conflict_duplicate_count": 0,
+      "name_disagreement_count": 31282,
+      "name_basis_counts": {
+        "단지명_공시가격": 46385
+      },
+      "missing_name_by_source": {
+        "단지명_공시가격": 0,
+        "단지명_건축물대장": 7046,
+        "단지명_도로명주소": 6217
+      },
+      "invalid_approval_dates": [],
+      "sido_counts": {
+        "강원특별자치도": 1360,
+        "경기도": 8491,
+        "경상남도": 3706,
+        "경상북도": 2938,
+        "광주광역시": 1319,
+        "대구광역시": 2084,
+        "대전광역시": 1068,
+        "부산광역시": 4791,
+        "서울특별시": 9528,
+        "세종특별자치시": 246,
+        "울산광역시": 1665,
+        "인천광역시": 2261,
+        "전라남도": 1491,
+        "전북특별자치도": 1466,
+        "제주특별자치도": 1153,
+        "충청남도": 1519,
+        "충청북도": 1299
+      },
+      "sigungu_count": 252,
+      "dong_count": 3781,
+      "missing_dong_code_count": 0,
+      "unknown_address_components_count": 0
+    },
+    "coordinate_supplement": {
+      "source_url": "https://data.seoul.go.kr/dataList/OA-15818/A/1/datasetView.do",
+      "download_url": "https://datafile.seoul.go.kr/bigfile/iot/sheet/csv/download.do",
+      "access": "Official public Sheet CSV export; no API key, no sample API pagination",
+      "raw_file": "data/raw/seoul_openaptinfo_20260928.csv",
+      "raw_encoding": "cp949",
+      "raw_sha256": "cd4d5e7056ebf8bbccccdea85e3f8d9e6016ab5ad8e1373839f638cbbd93d157",
+      "source_record_count": 2893,
+      "raw_bytes": 1431784,
+      "downloaded_at": "2026-09-28T08:12:20.625944+00:00",
+      "counts": {
+        "unique_road_address_pairs": 2426,
+        "matched_records": 2361,
+        "dong_mismatch": 9,
+        "approval_date_mismatch": 30,
+        "invalid_coordinates": 26
+      },
+      "match_basis": "Both sources must have exactly one record for the same road address, identical legal dong and identical approval date; bounded lon/lat required.",
+      "license": "공공누리 제1유형 출처표시 — 서울특별시"
+    }
+  },
+  "dictionary_version": "seed-1.1.0",
+  "decades": [
+    {
+      "decade": 1960,
+      "n": 43,
+      "mean_name_length": 6.44,
+      "recognized_brand_count": 0,
+      "token_counts": {
+        "그린": 0,
+        "리버": 0,
+        "파크": 0,
+        "포레": 0,
+        "롯데캐슬": 0,
+        "카이저": 0
+      },
+      "token_shares": {
+        "그린": 0.0,
+        "리버": 0.0,
+        "파크": 0.0,
+        "포레": 0.0,
+        "롯데캐슬": 0.0,
+        "카이저": 0.0
+      }
+    },
+    {
+      "decade": 1970,
+      "n": 586,
+      "mean_name_length": 4.12,
+      "recognized_brand_count": 3,
+      "token_counts": {
+        "그린": 0,
+        "리버": 2,
+        "파크": 1,
+        "포레": 0,
+        "롯데캐슬": 0,
+        "카이저": 0
+      },
+      "token_shares": {
+        "그린": 0.0,
+        "리버": 0.0034129692832764505,
+        "파크": 0.0017064846416382253,
+        "포레": 0.0,
+        "롯데캐슬": 0.0,
+        "카이저": 0.0
+      }
+    },
+    {
+      "decade": 1980,
+      "n": 4127,
+      "mean_name_length": 4.21,
+      "recognized_brand_count": 4,
+      "token_counts": {
+        "그린": 40,
+        "리버": 1,
+        "파크": 95,
+        "포레": 1,
+        "롯데캐슬": 0,
+        "카이저": 0
+      },
+      "token_shares": {
+        "그린": 0.00969227041434456,
+        "리버": 0.000242306760358614,
+        "파크": 0.02301914223406833,
+        "포레": 0.000242306760358614,
+        "롯데캐슬": 0.0,
+        "카이저": 0.0
+      }
+    },
+    {
+      "decade": 1990,
+      "n": 12102,
+      "mean_name_length": 5.0,
+      "recognized_brand_count": 55,
+      "token_counts": {
+        "그린": 389,
+        "리버": 21,
+        "파크": 245,
+        "포레": 3,
+        "롯데캐슬": 1,
+        "카이저": 0
+      },
+      "token_shares": {
+        "그린": 0.032143447364072056,
+        "리버": 0.0017352503718393653,
+        "파크": 0.020244587671459265,
+        "포레": 0.00024789291026276647,
+        "롯데캐슬": 8.263097008758883e-05,
+        "카이저": 0.0
+      }
+    },
+    {
+      "decade": 2000,
+      "n": 15164,
+      "mean_name_length": 6.57,
+      "recognized_brand_count": 1038,
+      "token_counts": {
+        "그린": 484,
+        "리버": 143,
+        "파크": 555,
+        "포레": 32,
+        "롯데캐슬": 100,
+        "카이저": 2
+      },
+      "token_shares": {
+        "그린": 0.03191769981535215,
+        "리버": 0.009430229490899498,
+        "파크": 0.03659984173041414,
+        "포레": 0.0021102611448166712,
+        "롯데캐슬": 0.006594566077552097,
+        "카이저": 0.00013189132155104195
+      }
+    },
+    {
+      "decade": 2010,
+      "n": 10158,
+      "mean_name_length": 7.73,
+      "recognized_brand_count": 1418,
+      "token_counts": {
+        "그린": 160,
+        "리버": 110,
+        "파크": 540,
+        "포레": 113,
+        "롯데캐슬": 81,
+        "카이저": 3
+      },
+      "token_shares": {
+        "그린": 0.015751132112620594,
+        "리버": 0.01082890332742666,
+        "파크": 0.05316007088009451,
+        "포레": 0.011124237054538294,
+        "롯데캐슬": 0.007974010632014175,
+        "카이저": 0.00029533372711163615
+      }
+    },
+    {
+      "decade": 2020,
+      "n": 4205,
+      "mean_name_length": 9.24,
+      "recognized_brand_count": 1094,
+      "token_counts": {
+        "그린": 42,
+        "리버": 70,
+        "파크": 295,
+        "포레": 215,
+        "롯데캐슬": 43,
+        "카이저": 1
+      },
+      "token_shares": {
+        "그린": 0.009988109393579072,
+        "리버": 0.016646848989298454,
+        "파크": 0.07015457788347206,
+        "포레": 0.05112960760998811,
+        "롯데캐슬": 0.010225921521997621,
+        "카이저": 0.00023781212841854935
+      }
+    }
+  ],
+  "gis": {
+    "파크": {
+      "status": "ready",
+      "message": "실측 거리의 탐색적 비교입니다. 표본 범위와 측정 방법을 함께 확인해 주세요.",
+      "token": "파크",
+      "feature": "park",
+      "threshold_m": 500.0,
+      "summary": {
+        "target_n": 111,
+        "control_n": 2250,
+        "target_median_m": 134.5,
+        "control_median_m": 158.0,
+        "target_near_share": 0.9819819819819819,
+        "control_near_share": 0.9671111111111111,
+        "median_difference_m": -23.5,
+        "permutation_p_value": 0.031,
+        "adjusted_mean_difference_m": -28.3,
+        "matched_target_n": 111,
+        "matched_control_n": 976,
+        "matched_strata": 46
+      },
+      "coverage": {
+        "measured_count": 2361,
+        "population_count": 46385
+      },
+      "warnings": [
+        "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+        "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+        "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+        "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다.",
+        "p값은 같은 시군구·사용승인 10년대 안의 가중 평균 거리 차이를 검정합니다(양측 순열 999회). 위의 전체 중앙값 차이에 대한 p값이 아닙니다. 최소 해상도는 0.001이며 다중검정 보정은 하지 않았습니다.",
+        "동네·사업단위 공간상관, 브랜드와 단지규모 등 남은 교란을 통제한 결과가 아닙니다."
+      ],
+      "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조.",
+      "demo": false
+    },
+    "리버": {
+      "status": "ready",
+      "message": "실측 거리의 탐색적 비교입니다. 표본 범위와 측정 방법을 함께 확인해 주세요.",
+      "token": "리버",
+      "feature": "water",
+      "threshold_m": 500.0,
+      "summary": {
+        "target_n": 46,
+        "control_n": 2315,
+        "target_median_m": 317.8,
+        "control_median_m": 546.5,
+        "target_near_share": 0.7608695652173914,
+        "control_near_share": 0.4444924406047516,
+        "median_difference_m": -228.8,
+        "permutation_p_value": 0.001,
+        "adjusted_mean_difference_m": -237.7,
+        "matched_target_n": 46,
+        "matched_control_n": 522,
+        "matched_strata": 19
+      },
+      "coverage": {
+        "measured_count": 2361,
+        "population_count": 46385
+      },
+      "warnings": [
+        "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+        "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+        "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+        "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다.",
+        "p값은 같은 시군구·사용승인 10년대 안의 가중 평균 거리 차이를 검정합니다(양측 순열 999회). 위의 전체 중앙값 차이에 대한 p값이 아닙니다. 최소 해상도는 0.001이며 다중검정 보정은 하지 않았습니다.",
+        "동네·사업단위 공간상관, 브랜드와 단지규모 등 남은 교란을 통제한 결과가 아닙니다."
+      ],
+      "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조.",
+      "demo": false
+    },
+    "포레": {
+      "status": "ready",
+      "message": "실측 거리의 탐색적 비교입니다. 표본 범위와 측정 방법을 함께 확인해 주세요.",
+      "token": "포레",
+      "feature": "forest",
+      "threshold_m": 500.0,
+      "summary": {
+        "target_n": 36,
+        "control_n": 2325,
+        "target_median_m": 194.6,
+        "control_median_m": 347.1,
+        "target_near_share": 0.9166666666666666,
+        "control_near_share": 0.6404301075268817,
+        "median_difference_m": -152.4,
+        "permutation_p_value": 0.023,
+        "adjusted_mean_difference_m": -126.9,
+        "matched_target_n": 36,
+        "matched_control_n": 377,
+        "matched_strata": 22
+      },
+      "coverage": {
+        "measured_count": 2361,
+        "population_count": 46385
+      },
+      "warnings": [
+        "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+        "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+        "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+        "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다.",
+        "p값은 같은 시군구·사용승인 10년대 안의 가중 평균 거리 차이를 검정합니다(양측 순열 999회). 위의 전체 중앙값 차이에 대한 p값이 아닙니다. 최소 해상도는 0.001이며 다중검정 보정은 하지 않았습니다.",
+        "동네·사업단위 공간상관, 브랜드와 단지규모 등 남은 교란을 통제한 결과가 아닙니다."
+      ],
+      "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조.",
+      "demo": false
+    },
+    "메트로": {
+      "status": "insufficient",
+      "message": "토큰 포함·비포함 표본이 각 5개 이상일 때 비교 검정을 제공합니다.",
+      "token": "메트로",
+      "feature": "metro",
+      "threshold_m": 500.0,
+      "summary": {
+        "target_n": 2,
+        "control_n": 2359,
+        "target_median_m": 146.5,
+        "control_median_m": 425.2,
+        "target_near_share": 1.0,
+        "control_near_share": 0.6015260703688003,
+        "median_difference_m": -278.7,
+        "permutation_p_value": null,
+        "adjusted_mean_difference_m": null,
+        "matched_target_n": 0,
+        "matched_control_n": 0,
+        "matched_strata": 0
+      },
+      "coverage": {
+        "measured_count": 2361,
+        "population_count": 46385
+      },
+      "warnings": [
+        "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+        "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+        "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+        "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다."
+      ],
+      "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조.",
+      "demo": false
+    },
+    "에듀": {
+      "status": "insufficient",
+      "message": "토큰 포함·비포함 표본이 각 5개 이상일 때 비교 검정을 제공합니다.",
+      "token": "에듀",
+      "feature": "school",
+      "threshold_m": 500.0,
+      "summary": {
+        "target_n": 3,
+        "control_n": 2358,
+        "target_median_m": 24.8,
+        "control_median_m": 183.4,
+        "target_near_share": 1.0,
+        "control_near_share": 0.9643765903307888,
+        "median_difference_m": -158.6,
+        "permutation_p_value": null,
+        "adjusted_mean_difference_m": null,
+        "matched_target_n": 0,
+        "matched_control_n": 0,
+        "matched_strata": 0
+      },
+      "coverage": {
+        "measured_count": 2361,
+        "population_count": 46385
+      },
+      "warnings": [
+        "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+        "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+        "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+        "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다."
+      ],
+      "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조.",
+      "demo": false
+    }
+  },
+  "park_sensitivity": {
+    "exclude_possible_brands": {
+      "excluded_terms": [
+        "한솔솔파크",
+        "대주파크빌",
+        "문영퀸즈파크"
+      ],
+      "excluded_count": 7,
+      "exclusion_basis": "unresolved_semantic_candidates_not_verified_brand_reclassification",
+      "excluded_records": [
+        {
+          "id": "reb:11305100448305",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강북구",
+          "dong": "번동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11350100002668",
+          "name": "대주파크빌아파트",
+          "sido": "서울특별시",
+          "sigungu": "노원구",
+          "dong": "공릉동",
+          "approval_year": 2003
+        },
+        {
+          "id": "reb:11380100256577",
+          "name": "DMC문영퀸즈파크아파트",
+          "sido": "서울특별시",
+          "sigungu": "은평구",
+          "dong": "증산동",
+          "approval_year": 2004
+        },
+        {
+          "id": "reb:11470100248953",
+          "name": "대주파크빌",
+          "sido": "서울특별시",
+          "sigungu": "양천구",
+          "dong": "신월동",
+          "approval_year": 2004
+        },
+        {
+          "id": "reb:11500120008517",
+          "name": "강변한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "dong": "염창동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11500120008562",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "dong": "마곡동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11560120100738",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "영등포구",
+          "dong": "대림동",
+          "approval_year": 2008
+        }
+      ],
+      "gis": {
+        "status": "ready",
+        "message": "실측 거리의 탐색적 비교입니다. 표본 범위와 측정 방법을 함께 확인해 주세요.",
+        "token": "파크",
+        "feature": "park",
+        "threshold_m": 500.0,
+        "summary": {
+          "target_n": 104,
+          "control_n": 2250,
+          "target_median_m": 127.2,
+          "control_median_m": 158.0,
+          "target_near_share": 0.9807692307692307,
+          "control_near_share": 0.9671111111111111,
+          "median_difference_m": -30.9,
+          "permutation_p_value": 0.035,
+          "adjusted_mean_difference_m": -27.3,
+          "matched_target_n": 104,
+          "matched_control_n": 841,
+          "matched_strata": 43
+        },
+        "coverage": {
+          "measured_count": 2354,
+          "population_count": 46378
+        },
+        "warnings": [
+          "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+          "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+          "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+          "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다.",
+          "p값은 같은 시군구·사용승인 10년대 안의 가중 평균 거리 차이를 검정합니다(양측 순열 999회). 위의 전체 중앙값 차이에 대한 p값이 아닙니다. 최소 해상도는 0.001이며 다중검정 보정은 하지 않았습니다.",
+          "동네·사업단위 공간상관, 브랜드와 단지규모 등 남은 교란을 통제한 결과가 아닙니다."
+        ],
+        "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조."
+      }
+    },
+    "exclude_possible_brands_and_parkio": {
+      "excluded_terms": [
+        "한솔솔파크",
+        "대주파크빌",
+        "문영퀸즈파크",
+        "파크리오"
+      ],
+      "excluded_count": 8,
+      "exclusion_basis": "unresolved_semantic_candidates_not_verified_brand_reclassification",
+      "excluded_records": [
+        {
+          "id": "reb:11305100448305",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강북구",
+          "dong": "번동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11350100002668",
+          "name": "대주파크빌아파트",
+          "sido": "서울특별시",
+          "sigungu": "노원구",
+          "dong": "공릉동",
+          "approval_year": 2003
+        },
+        {
+          "id": "reb:11380100256577",
+          "name": "DMC문영퀸즈파크아파트",
+          "sido": "서울특별시",
+          "sigungu": "은평구",
+          "dong": "증산동",
+          "approval_year": 2004
+        },
+        {
+          "id": "reb:11470100248953",
+          "name": "대주파크빌",
+          "sido": "서울특별시",
+          "sigungu": "양천구",
+          "dong": "신월동",
+          "approval_year": 2004
+        },
+        {
+          "id": "reb:11500120008517",
+          "name": "강변한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "dong": "염창동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11500120008562",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "강서구",
+          "dong": "마곡동",
+          "approval_year": 2005
+        },
+        {
+          "id": "reb:11560120100738",
+          "name": "한솔솔파크",
+          "sido": "서울특별시",
+          "sigungu": "영등포구",
+          "dong": "대림동",
+          "approval_year": 2008
+        },
+        {
+          "id": "reb:11710120100792",
+          "name": "파크리오",
+          "sido": "서울특별시",
+          "sigungu": "송파구",
+          "dong": "신천동",
+          "approval_year": 2008
+        }
+      ],
+      "gis": {
+        "status": "ready",
+        "message": "실측 거리의 탐색적 비교입니다. 표본 범위와 측정 방법을 함께 확인해 주세요.",
+        "token": "파크",
+        "feature": "park",
+        "threshold_m": 500.0,
+        "summary": {
+          "target_n": 103,
+          "control_n": 2250,
+          "target_median_m": 130.4,
+          "control_median_m": 158.0,
+          "target_near_share": 0.9805825242718447,
+          "control_near_share": 0.9671111111111111,
+          "median_difference_m": -27.7,
+          "permutation_p_value": 0.044,
+          "adjusted_mean_difference_m": -26.5,
+          "matched_target_n": 103,
+          "matched_control_n": 841,
+          "matched_strata": 43
+        },
+        "coverage": {
+          "measured_count": 2353,
+          "population_count": 46377
+        },
+        "warnings": [
+          "거리 중앙값은 현재 선택 표본의 기술통계입니다. 인과효과나 조망권을 뜻하지 않습니다.",
+          "좌표와 지형 자료가 연결된 표본만 비교합니다. 미측정 단지는 0m 또는 시설 없음으로 처리하지 않습니다.",
+          "현재 지도와 현재 이름을 비교하며 명명 당시의 지형·시설을 복원한 분석이 아닙니다.",
+          "OpenStreetMap 지형의 누락, 좌표 결합 오류, 단지 대표점과 출입구의 차이가 결과에 영향을 줍니다.",
+          "p값은 같은 시군구·사용승인 10년대 안의 가중 평균 거리 차이를 검정합니다(양측 순열 999회). 위의 전체 중앙값 차이에 대한 p값이 아닙니다. 최소 해상도는 0.001이며 다중검정 보정은 하지 않았습니다.",
+          "동네·사업단위 공간상관, 브랜드와 단지규모 등 남은 교란을 통제한 결과가 아닙니다."
+        ],
+        "method": "단지 대표 좌표에서 지도에 기록된 지형·시설까지의 평면 직선거리. 상세 기준은 GIS 문서 참조."
+      }
+    }
+  },
+  "dictionary_sensitivity": {
+    "removed_canonical_entries_for_baseline": [
+      "디에이치",
+      "로덴하우스",
+      "루미니",
+      "르엘",
+      "리버티",
+      "리슈빌",
+      "센트레빌",
+      "엘리프",
+      "우미린",
+      "제일풍경채",
+      "중흥S클래스",
+      "파크드림",
+      "포레나",
+      "하늘채",
+      "휴포레"
+    ],
+    "comparison": "current dictionary versus the same dictionary with this supplement removed",
+    "target_counts": {
+      "파크": {
+        "national_before": 1786,
+        "national_after": 1731,
+        "gis_before": 111,
+        "gis_after": 111
+      },
+      "리버": {
+        "national_before": 356,
+        "national_after": 347,
+        "gis_before": 47,
+        "gis_after": 46
+      },
+      "포레": {
+        "national_before": 429,
+        "national_after": 364,
+        "gis_before": 41,
+        "gis_after": 36
+      },
+      "하늘": {
+        "national_before": 174,
+        "national_after": 72,
+        "gis_before": 8,
+        "gis_after": 0
+      }
+    }
+  },
+  "gis_metadata": {
+    "bbox": [
+      37.35,
+      126.7,
+      37.75,
+      127.25
+    ],
+    "downloaded_at": "2026-09-28T08:15:45.871792+00:00",
+    "osm_timestamp": "2026-09-28T08:11:40Z",
+    "feature_counts": {
+      "metro": 2898,
+      "school": 2988,
+      "forest": 4244,
+      "park": 4615,
+      "water": 1305
+    },
+    "measured_complexes": 2361,
+    "distance_counts": {
+      "metro": 2361,
+      "school": 2361,
+      "forest": 2361,
+      "park": 2361,
+      "water": 2361
+    },
+    "source_url": "https://overpass-api.de/api/interpreter",
+    "license": "OpenStreetMap contributors, ODbL",
+    "limitations": [
+      "서울권 지형 추출 범위 내 좌표 매칭 표본만 측정",
+      "현재 OSM에 기록된 시설·지형; 완전한 전수목록 아님",
+      "water는 호수·연못·강 수면과 강 중심선을 포함; 리버 전용 강변 지표가 아님",
+      "직선거리이며 접근로·출입구·조망·명명 당시 환경을 나타내지 않음",
+      "추출 범위 경계보다 가까운 지형이 발견된 경우만 측정치를 보존"
+    ]
+  },
+  "input_sha256": {
+    "data/processed/complexes.jsonl": "a8247d0c86443df8e797c451c7ace8b0a7d02790749c49d2576fb044fe1dde9f",
+    "data/processed/gis_distances.jsonl": "4f3b8c5c5cd5acafb2e4821d581ee3d68e008f182d2733202c7baefa5ccf4a91",
+    "dictionaries/tokens.v1.json": "06e1d2e4cbc441f60f7acb8e3be86a80f8fba37c77b7f6292286aa3cb68f99b3",
+    "dictionaries/brands.supplement.json": "78a57863d6a61d1b4bbff4f555a3be23b4c5fe193dc1198ceba0b00fd3d0d645"
+  },
+  "statistical_method": {
+    "descriptive_statistic": "unadjusted full measured-sample median distance by token presence",
+    "test_statistic": "target-count-weighted within-sigungu-by-approval-decade mean difference",
+    "sign": "target minus control; negative means shorter target-group distance",
+    "permutations": 999,
+    "seed": 20260928,
+    "alternative": "two-sided",
+    "multiple_testing_adjusted": false,
+    "causal_interpretation": false
+  }
+}

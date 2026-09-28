@@ -1,0 +1,579 @@
+{
+  "version": "seed-1.1.0",
+  "description": "탐색용 사전. 공식 출처 브랜드 14개와 리버티 전체어 보호를 보완했다. 전국 브랜드 전수사전이 아니며 짧은 부분 문자열·지명·수식어는 문맥 검수가 필요하다.",
+  "categories": {
+    "brand": "브랜드 명칭",
+    "company": "기업·그룹 층위의 명칭 후보; 직접 시공사나 법적 모회사라는 의미가 아님",
+    "place": "지명 후보",
+    "nature": "자연 이미지 어휘",
+    "premium": "고급·해외 이미지 어휘",
+    "building_type": "건물·주거 형식 어휘",
+    "number": "숫자·차수·단지 표시; 정규식으로 분절"
+  },
+  "entries": [
+    {
+      "canonical": "롯데캐슬",
+      "category": "brand",
+      "corporate_group": "롯데",
+      "entity_scope": "brand"
+    },
+    {
+      "canonical": "래미안",
+      "category": "brand"
+    },
+    {
+      "canonical": "푸르지오",
+      "category": "brand"
+    },
+    {
+      "canonical": "힐스테이트",
+      "category": "brand"
+    },
+    {
+      "canonical": "아이파크",
+      "category": "brand"
+    },
+    {
+      "canonical": "e편한세상",
+      "category": "brand",
+      "aliases": [
+        "e편한세상",
+        "E편한세상",
+        "이편한세상"
+      ]
+    },
+    {
+      "canonical": "자이",
+      "category": "brand",
+      "provisional": true,
+      "review_reasons": [
+        "short_substring_match"
+      ]
+    },
+    {
+      "canonical": "더샵",
+      "category": "brand",
+      "provisional": true,
+      "review_reasons": [
+        "short_substring_match"
+      ]
+    },
+    {
+      "canonical": "위브",
+      "category": "brand",
+      "provisional": true,
+      "review_reasons": [
+        "short_substring_match"
+      ]
+    },
+    {
+      "canonical": "데시앙",
+      "category": "brand"
+    },
+    {
+      "canonical": "호반써밋",
+      "category": "brand"
+    },
+    {
+      "canonical": "호반베르디움",
+      "category": "brand"
+    },
+    {
+      "canonical": "한화꿈에그린",
+      "category": "brand"
+    },
+    {
+      "canonical": "꿈에그린",
+      "category": "brand"
+    },
+    {
+      "canonical": "SK뷰",
+      "category": "brand",
+      "aliases": [
+        "SK뷰",
+        "SKVIEW",
+        "SKView",
+        "에스케이뷰"
+      ]
+    },
+    {
+      "canonical": "아크로",
+      "category": "brand"
+    },
+    {
+      "canonical": "롯데",
+      "category": "company",
+      "corporate_group": "롯데",
+      "entity_scope": "corporate_group",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "현대",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "삼성",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "대우",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "우성",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "한양",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "삼익",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "금호",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "한신",
+      "category": "company",
+      "provisional": true,
+      "review_reasons": [
+        "company_requires_context"
+      ]
+    },
+    {
+      "canonical": "화명",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "반포",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "서초",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "해운대",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "광교",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "동탄",
+      "category": "place",
+      "provisional": true,
+      "review_reasons": [
+        "place_requires_address_context"
+      ]
+    },
+    {
+      "canonical": "그린",
+      "category": "nature"
+    },
+    {
+      "canonical": "숲속",
+      "category": "nature"
+    },
+    {
+      "canonical": "숲",
+      "category": "nature",
+      "provisional": true,
+      "review_reasons": [
+        "short_substring_match"
+      ]
+    },
+    {
+      "canonical": "하늘",
+      "category": "nature"
+    },
+    {
+      "canonical": "리버",
+      "category": "nature"
+    },
+    {
+      "canonical": "레이크",
+      "category": "nature"
+    },
+    {
+      "canonical": "파크",
+      "category": "nature"
+    },
+    {
+      "canonical": "오션",
+      "category": "nature"
+    },
+    {
+      "canonical": "에코",
+      "category": "nature"
+    },
+    {
+      "canonical": "포레",
+      "category": "nature"
+    },
+    {
+      "canonical": "메트로",
+      "category": "premium",
+      "provisional": true,
+      "review_reasons": [
+        "premium_or_transport_image_requires_context"
+      ]
+    },
+    {
+      "canonical": "에듀",
+      "category": "premium"
+    },
+    {
+      "canonical": "카이저",
+      "category": "brand",
+      "corporate_group": null,
+      "parent_brand": null,
+      "entity_scope": "brand",
+      "classification_basis": "user_defined_project_taxonomy"
+    },
+    {
+      "canonical": "로열",
+      "category": "premium",
+      "aliases": [
+        "로열",
+        "로얄"
+      ]
+    },
+    {
+      "canonical": "센트럴",
+      "category": "premium",
+      "provisional": true,
+      "review_reasons": [
+        "premium_or_location_requires_context"
+      ]
+    },
+    {
+      "canonical": "프레스티지",
+      "category": "premium"
+    },
+    {
+      "canonical": "노블레스",
+      "category": "premium"
+    },
+    {
+      "canonical": "팰리스",
+      "category": "premium"
+    },
+    {
+      "canonical": "캐슬",
+      "category": "premium"
+    },
+    {
+      "canonical": "아파트",
+      "category": "building_type"
+    },
+    {
+      "canonical": "주상복합",
+      "category": "building_type"
+    },
+    {
+      "canonical": "오피스텔",
+      "category": "building_type"
+    },
+    {
+      "canonical": "빌라",
+      "category": "building_type"
+    },
+    {
+      "canonical": "맨션",
+      "category": "building_type"
+    },
+    {
+      "canonical": "타운",
+      "category": "building_type",
+      "provisional": true,
+      "review_reasons": [
+        "building_type_requires_context"
+      ]
+    },
+    {
+      "canonical": "타워",
+      "category": "building_type",
+      "provisional": true,
+      "review_reasons": [
+        "building_type_requires_context"
+      ]
+    },
+    {
+      "canonical": "포레나",
+      "category": "brand",
+      "aliases": [
+        "포레나",
+        "FORENA"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.hanwha.com/profile/hanwha_businesses/aerospace-mechatronics.html",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "한화 공식 회사 소개의 주거 브랜드 포레나 설명"
+    },
+    {
+      "canonical": "하늘채",
+      "category": "brand",
+      "aliases": [
+        "하늘채"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.kolon.com/kr/media/newsDtl?detailsKey=8242",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "코오롱 공식 보도자료의 하늘채 브랜드 아이덴티티 설명"
+    },
+    {
+      "canonical": "센트레빌",
+      "category": "brand",
+      "aliases": [
+        "센트레빌"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://dbcon.dongbu.co.kr/business/house.do",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "동부건설 공식 주택사업의 아파트 브랜드 설명"
+    },
+    {
+      "canonical": "리슈빌",
+      "category": "brand",
+      "aliases": [
+        "리슈빌"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://elif.krcon.co.kr/brand/story",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "계룡건설 공식 브랜드 연혁"
+    },
+    {
+      "canonical": "엘리프",
+      "category": "brand",
+      "aliases": [
+        "엘리프",
+        "ELIF"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://elif.krcon.co.kr/brand/story",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "계룡건설 공식 브랜드 연혁"
+    },
+    {
+      "canonical": "로덴하우스",
+      "category": "brand",
+      "aliases": [
+        "로덴하우스"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://elif.krcon.co.kr/brand/story",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "계룡건설 공식 브랜드 연혁"
+    },
+    {
+      "canonical": "우미린",
+      "category": "brand",
+      "aliases": [
+        "우미린"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.woomi.com/kr-mo/business/house.do",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "우미 공식 주택사업의 주거 브랜드 설명; 단독 린은 보호하지 않음"
+    },
+    {
+      "canonical": "중흥S클래스",
+      "category": "brand",
+      "aliases": [
+        "중흥S클래스",
+        "중흥S-클래스",
+        "중흥에스클래스"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.s-class.co.kr/",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "중흥 공식 브랜드 홈페이지"
+    },
+    {
+      "canonical": "디에이치",
+      "category": "brand",
+      "aliases": [
+        "디에이치",
+        "THEH"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://m.hdec.kr/kr/company/press_view.aspx?CompanyPressSeq=38",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "현대건설 공식 보도자료의 주거 브랜드 설명"
+    },
+    {
+      "canonical": "르엘",
+      "category": "brand",
+      "aliases": [
+        "르엘",
+        "LE-EL"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.lottecon.co.kr/projects/housings_lotte_castles",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "롯데건설 공식 브랜드 소개"
+    },
+    {
+      "canonical": "루미니",
+      "category": "brand",
+      "aliases": [
+        "루미니",
+        "LUMINI"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.lottecon.co.kr/projects/housings_lotte_castles",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "롯데건설 공식 브랜드 소개"
+    },
+    {
+      "canonical": "제일풍경채",
+      "category": "brand",
+      "aliases": [
+        "제일풍경채",
+        "풍경채"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.pungkyeongchae.co.kr/",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "제일건설 공식 풍경채 브랜드 홈페이지"
+    },
+    {
+      "canonical": "파크드림",
+      "category": "brand",
+      "aliases": [
+        "파크드림"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://www.parkdream.kr/index.php/p/brand/story/?hcode=003.001",
+      "source_type": "official_corporate_or_brand_website",
+      "verified_at": "2026-09-28",
+      "source_note": "HS화성 공식 브랜드 스토리; 화성파크드림을 파크라는 입지 수식어로 분해하지 않음"
+    },
+    {
+      "canonical": "휴포레",
+      "category": "brand",
+      "aliases": [
+        "휴포레"
+      ],
+      "provisional": false,
+      "entity_scope": "brand",
+      "classification_basis": "primary_source_brand_verification",
+      "source_url": "https://sanyoung.co.kr/brand.php?CATE=01",
+      "source_type": "brand_design_agency_portfolio",
+      "verified_at": "2026-09-28",
+      "source_note": "브랜드 개발사 산영커뮤니케이션의 협성 휴포레 개발 포트폴리오"
+    },
+    {
+      "canonical": "리버티",
+      "category": "premium",
+      "aliases": [
+        "리버티"
+      ],
+      "provisional": true,
+      "review_reasons": [
+        "lexical_false_positive_protection",
+        "premium_interpretation_requires_review"
+      ],
+      "classification_basis": "conservative_whole_word_protection_not_brand_claim",
+      "source_url": "https://www.data.go.kr/data/15106861/fileData.do",
+      "source_type": "official_dataset_name_evidence_only",
+      "source_note": "서초동롯데캐슬리버티 등 실제 관측 이름의 리버티 전체를 보호한다. 리버의 강 이미지 의미를 자동 부여하지 않으며, premium 분류 및 어원은 연구자 해석이므로 잠정이다."
+    }
+  ],
+  "supplement_source": "brands.supplement.json"
+}
